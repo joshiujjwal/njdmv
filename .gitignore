@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+playwright-report/
+drivermanual.pdf
+.DS_Store
+.env
+.env.*

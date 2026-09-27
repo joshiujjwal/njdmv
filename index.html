@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>NJ Road Ready - Knowledge Test Practice</title>
+<style>
+:root{--ink:#142c35;--muted:#50656c;--paper:#f5f6f1;--card:#fff;--line:#d6ded7;--green:#155d49;--pale:#e8f2ea;--red:#a32d2d;--amber:#f1cd66}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:12px 20px;background:white;color:var(--ink);font-weight:650}button:hover:not(:disabled){border-color:var(--green);background:var(--pale)}button:disabled{opacity:.45;cursor:not-allowed}button.primary{background:var(--green);color:white;border-color:var(--green)}button.primary:hover{background:#104737}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #bd8100;outline-offset:4px}a{color:var(--green);text-underline-offset:3px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.2rem,5vw,3.9rem);line-height:1.06;letter-spacing:-.045em;margin-bottom:20px}h2{font-size:1.65rem;line-height:1.3;letter-spacing:-.025em}h3{font-size:1.1rem}header{border-bottom:1px solid var(--line);background:#fff}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:20px;padding-bottom:20px}.brand{font-weight:850;letter-spacing:-.035em;font-size:1.2rem;display:flex;align-items:center;gap:12px}.route{background:var(--green);color:white;border-radius:8px;padding:4px 9px;line-height:1.25;font-size:1rem;text-align:center;letter-spacing:0}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:800;color:var(--green)}.wrap{max-width:1120px;margin:auto;padding:32px 24px}.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:32px 0 42px}.hero p{color:var(--muted);max-width:590px}.tag{display:inline-block;background:var(--pale);color:var(--green);padding:5px 10px;border-radius:6px;font-size:.78rem;font-weight:700}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}.exam-card{background:var(--ink);color:white;position:relative;overflow:hidden}.exam-card p{color:#d6e3de}.exam-card .primary{background:var(--amber);color:var(--ink);border-color:var(--amber);width:100%}.exam-card .primary:hover{background:#e5bd48}.exam-numbers{display:flex;gap:32px;margin:25px 0}.exam-numbers strong{display:block;font-size:2.5rem;line-height:1.1}.exam-numbers span{font-size:.8rem;color:#d6e3de}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:20px 0}.stats{display:flex;gap:26px;flex-wrap:wrap;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:30px}.stats strong{font-size:1.5rem;display:block}.muted,small{color:var(--muted)}.row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.hidden,[hidden]{display:none!important}.notice{padding:14px 18px;border:1px solid #e2bc53;background:#fff4d3;border-radius:10px;margin-bottom:22px}#quiz{max-width:840px;margin:0 auto}.quiz-top{margin-bottom:20px}.progress{height:7px;border-radius:20px;background:#e2e8e2;overflow:hidden;margin:18px 0 26px}.progress span{display:block;height:100%;background:var(--green);transition:width .2s}.question-panel{padding:32px}#question{margin:18px 0 24px;font-size:clamp(1.3rem,3vw,1.75rem)}.answers{display:grid;gap:12px}.answer{text-align:left;display:flex;align-items:center;gap:14px;width:100%;font-weight:500;padding:15px 18px}.letter{background:#f0f3ee;border:1px solid var(--line);border-radius:6px;width:30px;height:30px;display:grid;place-items:center;flex-shrink:0;font-size:.8rem;font-weight:800}.answer[aria-pressed=true]{border:2px solid var(--green);background:var(--pale);padding:14px 17px}.answer.correct{border:2px solid var(--green);background:var(--pale);padding:14px 17px}.answer.incorrect{border:2px solid var(--red);background:#fff0ee;padding:14px 17px}.answer:disabled{opacity:1;cursor:default}#feedback{border-left:4px solid var(--green);background:var(--pale);padding:18px;margin-top:20px;border-radius:0 8px 8px 0}#feedback.wrong{border-color:var(--red);background:#fff0ee}.question-nav{display:flex;justify-content:space-between;gap:10px;margin-top:24px}.question-map{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.question-map button{padding:5px;width:38px;font-size:.8rem}.question-map .answered{background:var(--pale)}.question-map [aria-current=true]{outline:2px solid var(--green)}.score{font-size:4rem;font-weight:850;line-height:1.1;letter-spacing:-.05em;color:var(--green)}.review-item{padding:20px 0;border-top:1px solid var(--line)}.review-item h3{margin-bottom:10px}.review-item p{margin:6px 0}.bad{color:var(--red);font-weight:700}.good{color:var(--green);font-weight:700}select,input[type=search]{padding:11px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);max-width:100%}label{display:block;font-weight:650;margin-bottom:6px}select{width:100%}.topic-card{text-align:left;display:block;width:100%;font-weight:500;padding:18px}.topic-card strong{display:block}.topic-card small{display:block;margin-top:5px}.topic-track{height:4px;background:#e5eae4;display:block;margin-top:14px;border-radius:5px}.topic-track i{display:block;background:var(--green);height:100%;border-radius:5px}.sign{display:block;width:150px;height:150px;margin:0 auto 24px}details{border-top:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-weight:700}details p,details ul{margin-top:14px}footer{border-top:1px solid var(--line);margin-top:36px;padding-top:24px;color:var(--muted);font-size:.85rem}.search-row{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.search-row>div{flex:1;min-width:200px}#search{width:100%}.library-question{border-top:1px solid var(--line);padding:20px 0}.library-question .sign{width:100px;height:100px;margin:10px 0}.source{font-size:.85rem}.section-heading{margin:35px 0 15px}.section-heading p{margin-bottom:0}#quiz-status{font-size:.85rem}dialog{border:1px solid var(--line);border-radius:18px;padding:28px;max-width:480px;width:calc(100% - 32px);color:var(--ink)}dialog::backdrop{background:#102c3599}noscript{display:block;padding:24px;background:#fff4d3}
+@media(max-width:720px){.hero{grid-template-columns:1fr;gap:22px;padding-top:10px}.grid{grid-template-columns:1fr 1fr}.wrap{padding:22px 16px}.question-panel{padding:22px 18px}.header-note{display:none}.panel{padding:22px}.stats{gap:22px}.question-nav{flex-wrap:wrap}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.actions button{flex:1}.question-nav button{padding:11px 13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand"><span class="route">NJ<br>26</span> Road Ready</div><span class="header-note muted">A little practice. A safer driver.</span><a data-manual href="https://www.nj.gov/mvc/pdf/license/drivermanual.pdf" target="_blank" rel="noopener">Open manual</a></div></header>
+<noscript>This practice app needs JavaScript. Enable JavaScript in your browser, then reopen this file. The driver manual is available through the link above.</noscript>
+<main class="wrap">
+<div id="notice" class="notice" role="alert" hidden></div>
+<section id="home">
+  <div class="hero">
+    <div><p class="eyebrow">New Jersey / Knowledge test practice</p><h1>Know the road.<br>Own the test.</h1><p>Build confidence one question at a time. Original practice questions based on your <strong>2026 NJ Driver Manual</strong>, with explanations that take you back to the source.</p><span class="tag">Offline. No account. No tracking.</span></div>
+    <div class="panel exam-card"><p class="eyebrow" style="color:#e9d48b">The exam experience</p><h2>Ready for a test drive?</h2><p>A fresh mix of questions. Answers stay hidden until you finish.</p><div class="exam-numbers"><div><strong>50</strong><span>questions</span></div><div><strong>40</strong><span>correct to pass</span></div><div><strong>80%</strong><span>passing score</span></div></div><button id="start-exam" class="primary">Start mock exam</button><p style="font-size:.78rem;margin:12px 0 0">Untimed practice. This is not the official MVC exam.</p></div>
+  </div>
+  <div id="stats" class="stats"></div>
+  <div id="practice-controls" class="panel">
+    <div class="row"><div><p class="eyebrow">Learn at your pace</p><h2>Understand the why.</h2></div><span class="tag">Instant feedback in study mode</span></div>
+    <div class="search-row"><div><label for="topic-select">Topic</label><select id="topic-select"><option value="all">All automobile topics</option></select></div><div><label for="count-select">Questions per session</label><select id="count-select"><option value="10">10 questions / Quick practice</option><option value="25">25 questions / Deep dive</option><option value="50">50 questions / Longer session</option><option value="all">All questions in topic</option></select></div></div>
+    <div class="actions"><button id="start-study" class="primary">Start studying</button><button id="review-missed" disabled>Review missed (0)</button><button id="resume" hidden>Resume session</button><button id="browse">Browse all questions</button></div>
+    <p class="muted" style="font-size:.85rem;margin:12px 0 0">Topic drills use up to your selected count. Each question appears only once per session.</p>
+  </div>
+  <div id="topics"></div>
+  <div id="history"></div>
+  <div class="actions"><button id="reset-progress">Reset saved progress</button></div>
+  <details id="sources"><summary>Sources, coverage &amp; how to use this app</summary>
+    <p><strong>Start here:</strong> Read the manual, study topics, then take fresh mock exams. Use the explanations to understand the rule rather than memorize an answer letter. Aim for consistent results above the 80% minimum.</p>
+    <p><strong>Primary source:</strong> the supplied <a data-manual href="https://www.nj.gov/mvc/pdf/license/drivermanual.pdf" target="_blank" rel="noopener">2026 NJ Driver Manual</a> (243 PDF pages). References distinguish the printed page number from the PDF page number. The hosted app links to MVC's online PDF, which requires internet access and may change in future revisions. For offline page links, download the manual as <code>drivermanual.pdf</code> beside this HTML file and open <code>index.html</code> locally.</p>
+    <p><strong>Official format:</strong> NJ MVC's <a href="https://www.nj.gov/mvc/license/sample_knowledge_test.htm" target="_blank" rel="noopener">sample knowledge test</a> confirms 50 questions and 40 correct (80%) to pass. The manual, printed pp. 30-31, also describes an organ-donation survey question; that unscored survey is not simulated. This app uses four choices, shuffles questions and choices, balances coverage across its 13 topics, and lets you finish all 50. These are practice design choices, not a claim about MVC screen layout, topic weights, timing, or early stopping.</p>
+    <p><strong>Scope:</strong> basic automobile/Class D preparation: chapters 1-9 and the chapter 11 safety/sign appendix. Motorcycle-only licensing and riding techniques (chapter 10), CDL-specific exams, and the location directory are excluded. No app can promise every possible live exam question; this is an original study bank, not leaked or official test questions.</p>
+    <p><strong>Verified public samples:</strong> MVC publishes 19 numbered sample questions and an <a href="https://www.nj.gov/mvc/license/answers.htm" target="_blank" rel="noopener">official answer key</a>. These are public study samples, not a verified current live-exam bank. The sample's older "two-second" following-distance wording differs from the supplied 2026 manual; this app follows the manual's three-seconds-plus guidance in good conditions and four or more seconds in bad weather.</p>
+    <p><strong>Reddit follow-up:</strong> in a <a href="https://www.reddit.com/r/newjersey/comments/1up5xmk/nj_permit_test_practice/" target="_blank" rel="noopener">July 6, 2026 discussion</a>, a self-described driver's-ed teacher recommended Don-Tre, Primo and Drivability practice tests. The original poster reported passing on July 17 and said those sites helped. <a href="https://www.reddit.com/r/driving/comments/1vyhkmz/id_like_to_find_the_best_practice_driving_test/" target="_blank" rel="noopener">August 26</a> and <a href="https://www.reddit.com/r/hackettstown/comments/1wizfjo/what_are_the_best_ways_besides_school_to_study/" target="_blank" rel="noopener">September 17</a> discussions emphasized reading the manual. These are anecdotes, not independently verified credentials, results or actual exam questions. No Reddit claim is used as an answer source.</p>
+    <p><strong>Other research:</strong> <a href="https://www.nj.gov/mvc/license/knowledgetest.htm" target="_blank" rel="noopener">MVC knowledge-test guidance</a> directs applicants to the manual. <a href="https://www.nj.gov/mvc/license/firstlic.htm" target="_blank" rel="noopener">MVC's first-license guidance</a> confirms the under-21 supervised-driving requirement of 50 hours, including 10 in darkness. <a href="https://driving-tests.org/new-jersey/mvc-practice-test/" target="_blank" rel="noopener">Driving-Tests.org</a> was consulted for practice-format context, not copied for questions or used as legal authority. Its September 26, 2026 verification label is a publisher claim, not MVC certification.</p>
+    <p><strong>Source limitations:</strong> the manual is a study guide, not legal advice; statutes and regulations control. Some passages and penalty tables contain inconsistencies. Questions avoid those conflicting specifics rather than silently invent a resolution. Check MVC for current procedures and legal changes. Research date: September 27, 2026.</p>
+    <p><strong>Run locally:</strong> double-click <code>index.html</code>. No server, network connection, or installation is required to practice. Progress belongs to this browser/file location; private browsing or clearing browser data can erase it. Keep only one practice tab open to avoid competing saves. Your last 20 session scores are retained. If saving is unavailable, an explicit warning appears and you can still practice.</p>
+    <p><strong>Development:</strong> run <code>npm install</code>, <code>npx playwright install chromium</code>, then <code>npm test</code>. The bank uses pipe-separated rows inside <code>question-data</code>: topic, PDF page, prompt, correct answer, three alternatives, explanation, optional illustration key. Add new rows at the end: row order determines saved question IDs. Changes to existing IDs or answer text require a storage-version migration. Explanations and answer choices are original paraphrases; recheck their cited manual pages when editing.</p>
+  </details>
+</section>
+<section id="quiz" hidden aria-label="Practice session">
+  <div class="row quiz-top"><button id="home-button">Back to dashboard</button><span id="quiz-mode" class="tag"></span></div>
+  <div class="row"><strong id="counter"></strong><span id="quiz-status" class="muted"></span></div>
+  <div class="progress" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0"><span id="progress-fill"></span></div>
+  <div class="panel question-panel"><span id="question-topic" class="eyebrow"></span><div id="sign"></div><h2 id="question" tabindex="-1"></h2><div id="answers" class="answers" role="group" aria-label="Answer choices"></div><div id="feedback" role="status" hidden></div><div class="question-nav"><button id="previous">Previous</button><button id="next" class="primary">Next question</button><button id="finish">Finish test</button></div></div>
+  <details><summary>Jump to a question</summary><div id="question-map" class="question-map"></div></details>
+</section>
+<section id="results" hidden></section>
+<section id="library" hidden>
+  <button id="library-home">Return to dashboard</button>
+  <p class="eyebrow section-heading">Your study reference</p><h1 id="library-title" tabindex="-1">The question library.</h1>
+  <p class="muted">Every original question, organized and searchable. Reveal an answer when you are ready. Browsing does not affect your practice scores.</p>
+  <div class="panel"><div class="search-row"><div><label for="search">Search questions and explanations</label><input id="search" type="search" placeholder="Try school bus, BAC, parking..." autocomplete="off"></div><div><label for="library-topic">Filter topic</label><select id="library-topic"><option value="all">All automobile topics</option></select></div></div><p id="library-count" role="status" style="margin-top:16px"></p><div id="library-list"></div></div>
+</section>
+<dialog id="confirm-dialog"><h2 id="confirm-title"></h2><p id="confirm-message"></p><div class="actions"><button id="confirm-cancel">Keep practicing</button><button id="confirm-ok" class="primary">Confirm</button></div></dialog>
+<footer>Independent study aid. Not affiliated with NJ MVC. Practice while parked, never while driving.</footer>
+</main>
+<script id="question-data" type="text/plain">
+Licensing & GDL|6|What must you carry when driving a motor vehicle in New Jersey?|A valid license or validated permit, registration and insurance card|Only a driver license|Only proof of ownership|A passport and a repair receipt|All three driving credentials must be available when operating a vehicle.
+Licensing & GDL|6|How soon must you report an address change to MVC?|Within one week|Within two weeks|Within 30 days|At the next renewal|The manual requires address changes to be reported within one week, including moves out of New Jersey.
+Licensing & GDL|6|How soon must a legal name change be reported to MVC?|Within two weeks|Within 24 hours|Within 60 days|Only at renewal|The name-change deadline is two weeks; do not confuse it with the one-week address deadline.
+Licensing & GDL|6|A driver with a valid out-of-state noncommercial license moves to NJ. When must they apply for an NJ license?|Within 60 days or before the old license expires, whichever is sooner|Within one year regardless of expiration|Only after the old license expires|Within 90 days in every case|The earlier of 60 days and the existing expiration date controls.
+Licensing & GDL|7|A license applicant is 17. What additional consent is required?|A signed parent or guardian consent form|Consent from any licensed friend|No consent because the applicant is over 16|Only a school report card|Applicants under 18 need a completed consent form signed by a parent or guardian.
+Licensing & GDL|11|Which combination describes REAL ID's verification model?|Two proofs of address, one proof of Social Security number and six ID points|One address proof and two ID points|Six proofs of address only|A driver license and no other documents|REAL ID uses the 2+1+6 model, with primary and secondary identification requirements.
+Licensing & GDL|17|What is the minimum age to obtain a special learner permit?|16|15|17|18|The Early Bird route begins at 16 with consent and approved behind-the-wheel training.
+Licensing & GDL|18|What is the minimum age for an examination permit on the Young Adult route?|17|15|16|18|The examination-permit route begins at age 17.
+Licensing & GDL|17|Who purchases a special learner permit for a student?|An approved driving instructor|Any licensed neighbor|The student's employer|The student alone without an instructor|The approved instructor purchases the special learner permit.
+Licensing & GDL|21|How much approved behind-the-wheel instruction is required for a special learner permit?|Six full hours|Two hours|Ten full days|Fifty instructor hours|The training course includes six full hours in a dual-controlled vehicle, excluding time at MVC.
+Licensing & GDL|36|How much supervised practice must a GDL permit holder under 21 complete before a road test?|At least six months and 50 hours, including 10 in darkness|Three months with no hour requirement|Six months and five hours total|One year with no nighttime driving|The 2026 manual requires both the six-month period and 50 practice hours, including 10 during darkness.
+Licensing & GDL|36|Who may certify the required supervised driving hours?|A parent, guardian or supervising driver|Only a police officer|Any passenger regardless of age|Only a school principal|A completed BA-CSD certification is required at the road test.
+Licensing & GDL|19|What minimum supervised practice period applies to a first-time driver age 21 or older?|Three months|Two weeks|Six months|Two years|The Adult Road requires at least three months of supervised driving before the road test.
+Licensing & GDL|20|Who qualifies to supervise a permit holder from the front seat?|An adult at least 21 with a valid NJ license and at least three years of driving experience|Any licensed 18-year-old|Any adult with a foreign permit|Any NJ driver with six months of experience|The supervising driver must meet all three qualifications and sit in the front seat.
+Licensing & GDL|20|Without a qualifying exemption, when may a GDL driver under 21 NOT drive?|11:01 p.m. to 5:00 a.m.|Midnight to 6:00 a.m.|10:00 p.m. to 7:00 a.m.|Only between 2:00 a.m. and 4:00 a.m.|The nighttime restriction starts at 11:01 p.m. and ends at 5:00 a.m.
+Licensing & GDL|20|May a probationary driver use a hands-free phone while driving?|No, the GDL device restriction includes hands-free phones|Yes, if over age 18|Yes, on highways only|Yes, if the call is brief|The GDL ban covers handheld and hands-free phones, not just texting.
+Licensing & GDL|20|Which restrictions do NOT apply to examination-permit and probationary drivers age 21 or older?|Hour, passenger and decal restrictions|All GDL restrictions|The seat-belt and phone restrictions|The requirement to pass a road test|The age-21 exception is limited to hours, passengers and decals; other applicable restrictions remain.
+Licensing & GDL|20|A 19-year-old probationary driver is not accompanied by a parent or guardian. Which passengers are allowed?|Dependents and one additional person|Any three friends|Only other probationary drivers|As many friends as there are seat belts|For an under-21 probationary driver, dependents plus one additional person are allowed unless a parent or guardian accompanies the driver.
+Licensing & GDL|21|Where must an under-21 GDL driver display red decals?|At the top left of both front and rear license plates|On the windshield only|On the rear bumper only|On the dashboard and mirror|Two visible red reflective decals are required, one on each plate's top left corner.
+Licensing & GDL|21|What supports an under-21 GDL nighttime exemption for work or religion?|A signed certification on official employer or religious-organization letterhead|A text message from a friend|A verbal explanation only|A school ID alone|The driver must carry the required legible certification with the official's identifying and contact information.
+Licensing & GDL|17|What is the minimum age for a basic unrestricted automobile license?|18|16|17|21|A basic license requires being at least 18 and completing the required probationary period.
+Licensing & GDL|21|Does a probationary license automatically become a basic license after one year?|No, the driver must complete the upgrade with MVC|Yes, on the driver's birthday|Yes, after any 12 months without driving|Only the decals need to be removed|Until upgraded, the license remains probationary and applicable restrictions continue.
+Licensing & GDL|21|Who is responsible when a student driver commits a traffic offense?|Both the student and the instructor or supervising driver|Only the supervising driver|Only the vehicle owner|No one until the student is licensed|The manual places responsibility on both the student and supervising driver.
+Licensing & GDL|16|What fine may result from violating GDL restrictions?|$100|$10|$25|$1,500 for every first violation|The manual lists a $100 fine or possible suspension for violating GDL restrictions.
+Testing & documents|33|How many correct answers are needed on the 50-question knowledge test?|40|35|45|50|The passing threshold is 80%, which is 40 of 50.
+Testing & documents|33|What eyesight standard applies to a basic license applicant?|20/50 with or without corrective lenses|20/20 without glasses only|20/100 with glasses|20/40 only for everyone|The basic-license vision standard is 20/50; the CDL standard is different.
+Testing & documents|36|Which vehicle feature must be accessible to the road-test examiner?|The foot brake or a parking brake mounted to the driver's right|Only the radio|Only the trunk release|Only the fuel door|The examiner needs unobstructed access to the specified brake control.
+Testing & documents|36|When may a rental car be used for the road test?|When the applicant is listed as a driver on the rental agreement|Whenever a friend rented it|Only if no insurance is carried|Never under any circumstances|The rental agreement must list the test applicant as a driver.
+Testing & documents|36|May you practice in the MVC road-test course or parallel-parking area?|No|Yes, after business hours|Yes, with any instructor|Yes, if the course looks empty|Practice driving is prohibited on the test course and its parallel-parking area.
+Testing & documents|37|While waiting in the road-test line, may a permit holder move the car alone?|No, a licensed accompanying driver must remain in the vehicle|Yes, if it is only a few feet|Yes, if the parking brake works|Yes, if another applicant watches|The accompanying licensed driver must remain in the vehicle even when moving in the test line.
+Vehicle control & safety|42|Who is responsible for ensuring passengers under age 18 wear seat belts?|The driver|Only each passenger|Only the vehicle manufacturer|Only the child's school|The driver is responsible for passengers under 18; adult front-seat passengers are responsible for themselves.
+Vehicle control & safety|43|How should a lap belt fit?|Low across the hips, below the abdomen|Loose across the stomach|Around the thighs only|Behind the driver's back|The lap belt should be low and secure; the shoulder belt crosses the chest and collarbone.
+Vehicle control & safety|45|Can air bags replace seat belts?|No, they supplement seat belts|Yes, at low speed|Yes, for adults in front|Yes, in cars with side air bags|Air bags provide supplemental protection and work with lap and shoulder belts.
+Vehicle control & safety|44|What restraint is appropriate for a one-year-old child who weighs 25 pounds?|A rear-facing seat with a five-point harness|A booster seat with a lap belt only|An adult seat belt alone|No restraint on short trips|This child is below both age two and 30 pounds and must use the rear-facing five-point-harness restraint.
+Vehicle control & safety|45|Where must a rear-facing child seat NOT be placed?|In front of an active passenger-side air bag|In a properly equipped rear seat|In a rear seat with the correct harness|Behind the front passenger seat|An active front air bag can severely injure a child in a rear-facing restraint.
+Vehicle control & safety|44|A six-year-old child is 50 inches tall. Is an adult seat belt alone sufficient?|No, an appropriate approved child restraint or booster is required|Yes, because the child is over four|Yes, on neighborhood trips|Yes, if sitting in front|Children under eight and under 57 inches need the specified child restraint or booster.
+Vehicle control & safety|48|When should tire pressure be checked for an accurate routine reading?|When tires are cold|Only after highway driving|Only when a tire looks flat|Only during rain|Use the owner's manual or driver-door label for the correct pressure and check cold tires.
+Vehicle control & safety|48|What is the minimum tire tread depth stated in the manual?|1/16 inch|1/2 inch|1/4 inch|One inch|Do not drive with less than 1/16 inch of tread; worn tires reduce road grip.
+Vehicle control & safety|49|Before driving after a snowstorm, what must you do?|Make reasonable efforts to clear accumulated snow and ice from exposed vehicle surfaces|Clear only a small windshield opening|Clear only the headlights|Wait for speed to blow the snow off|Clear the hood, trunk, roof and windshield as well as other exposed surfaces.
+Vehicle control & safety|49|Why is carbon monoxide especially dangerous?|It is an odorless, colorless gas in vehicle exhaust|It always has a strong warning smell|It can only collect outdoors|It is visible as a green cloud|You cannot rely on smell or sight to detect carbon monoxide.
+Vehicle control & safety|50|Is idling a vehicle in a garage safe simply because the garage door is open?|No, dangerous carbon monoxide can still accumulate|Yes, for any length of time|Yes, if the radio is off|Yes, with headlights on|The manual warns against idling in a garage or confined space even with the outside door open.
+Vehicle control & safety|50|What should you do if carbon monoxide poisoning is suspected in a vehicle?|Safely stop, turn off the engine, get fresh air and call 911|Keep driving with the windows closed|Wait to see whether symptoms worsen|Run the engine faster|Get away from the source and seek immediate emergency medical attention.
+Vehicle control & safety|52|What is NJ's general vehicle-idling limit, apart from specified exceptions?|Three minutes|Ten minutes|Thirty minutes|No limit for private cars|The general limit is three consecutive minutes; the manual lists specific exceptions such as stopped traffic.
+Vehicle control & safety|53|What normal steering-wheel hand position does the manual recommend?|9 and 3 o'clock on the outside rim|Both hands at 12 o'clock|One hand inside the rim|Both hands at 6 o'clock|The 9-and-3 position helps control the vehicle and reduces injury risk from air-bag deployment.
+Vehicle control & safety|52|How do you check a blind spot before moving?|Turn your head to look, as well as checking mirrors|Use only the interior mirror|Assume a signal clears the space|Look only at the dashboard|Mirrors do not show every area beside or behind the car.
+Vehicle control & safety|55|How should you brake hard in an ABS-equipped vehicle?|Apply firm pressure without pumping the pedal|Pump the pedal rapidly|Switch the ignition to lock|Turn the wheel violently|ABS modulates braking; do not pump the pedal or jerk the steering wheel.
+Vehicle control & safety|54|Which factor affects stopping distance?|Speed, reaction time, road condition and brake/tire condition|Only the posted speed limit|Only the color of the car|Only whether the horn works|Stopping distance depends on the driver, vehicle, speed and driving conditions.
+Vehicle control & safety|56|How far before a turn must you signal?|At least 100 feet|At least 10 feet|Only while turning|At least one mile|Signal at least 100 feet before turning, then cancel the signal afterward.
+Vehicle control & safety|56|What does a driver's left arm extended straight out mean?|Left turn|Right turn|Stop|Reverse|A horizontal left arm is the standard left-turn hand signal.
+Vehicle control & safety|56|What does a driver's left arm bent upward mean?|Right turn|Left turn|Slow down or stop|The vehicle is parked|For a motorist, an upward left hand and arm indicates a right turn.
+Vehicle control & safety|56|What does a driver's left arm pointing downward, palm to the rear, mean?|Slowing or stopping|Right turn|Left turn|Accelerating|The downward arm signal warns following traffic of slowing or stopping.
+Vehicle control & safety|57|At what speed should you generally reverse a vehicle?|Walking speed, about 2-4 mph|15-20 mph|The posted speed limit|At least 10 mph|Reverse slowly while directly checking the path behind you.
+Vehicle control & safety|57|You miss a planned turn. What is the safest response?|Continue and take the next safe turn|Back up immediately in traffic|Turn abruptly from the wrong lane|Stop in the travel lane to reconsider|Do not make a last-minute turn or back up to recover a missed turn.
+Vehicle control & safety|59|When parking downhill next to a curb, which way should the wheels face?|Toward the curb|Away from the curb|Straight ahead in every case|Toward the center of the road|Turn toward the curb, set the parking brake and select the proper gear.
+Vehicle control & safety|59|When parking uphill next to a curb, which way should the wheels face?|Away from the curb|Toward the curb|Straight ahead in every case|In any direction if the engine is off|Turn away from the curb, set the parking brake and select the proper gear.
+Speed & passing|64|Unless otherwise posted, what is the speed limit in a school zone or business/residential district?|25 mph|35 mph|45 mph|50 mph|The manual lists 25 mph for school zones and business or residential districts unless otherwise posted.
+Speed & passing|64|Unless otherwise posted, what is the limit in a suburban business or residential district?|35 mph|25 mph|50 mph|65 mph|The suburban business/residential default in the manual is 35 mph.
+Speed & passing|64|What is the speed limit on a non-posted rural roadway?|50 mph|25 mph|35 mph|65 mph|Non-posted rural roadways have a 50 mph limit.
+Speed & passing|65|The posted limit is 50 mph, but fog reduces visibility. What should you do?|Slow to a speed safe for the conditions|Maintain 50 mph because it is posted|Drive faster to leave the fog|Follow another car closely|The posted limit is not a guarantee that the speed is safe in current weather or traffic.
+Speed & passing|66|What do two solid center lines mean for passing?|Passing is prohibited in both directions|Passing is allowed if you honk|Only trucks may pass|Passing is allowed at night|Solid center lines prohibit passing; they are not permission to pass if the road looks clear.
+Speed & passing|66|A solid yellow line is on your side and a broken yellow line is on the other side. May you pass?|No, not from your side|Yes, if the opposing lane is empty|Yes, if you flash your headlights|Only if the other car is below the limit|Only the side with the broken center line permits passing when safe.
+Speed & passing|66|When passing beside a broken center line, when must the pass be completed?|Before the center line becomes solid again|Any time before the next town|Only before sunset|Before the next speed-limit sign|A legal passing opportunity ends where the broken center line becomes solid.
+Speed & passing|67|A car ahead is turning left. May you pass using the right shoulder?|No|Yes, if the shoulder is paved|Yes, if you stay below 15 mph|Yes, after sounding the horn|Passing on the right shoulder is illegal, even when the vehicle ahead is turning left.
+Speed & passing|67|When may passing on the right be allowed without using the shoulder?|On a road with multiple lanes moving in the same direction, when safe|On every two-way curve|Whenever a driver ahead is slow|Only across the sidewalk|Right-side passing is limited to specified circumstances; it is not permission to leave the roadway.
+Speed & passing|67|Why should you not pass near a hillcrest or blind curve?|You cannot see enough of the road ahead|Passing always damages the tires|The speed limit automatically doubles|Turn signals do not work on hills|Adequate sight distance is essential to avoid conflicts with oncoming traffic.
+Speed & passing|67|May you pass a vehicle that has stopped to let a pedestrian cross?|No|Yes, if you honk|Yes, if you use the opposite lane|Yes, when no crosswalk paint is visible|The stopped vehicle may hide a pedestrian. Never pass it.
+Speed & passing|67|On a multilane road with the right lane available, where should you normally drive?|In the rightmost available lane unless passing or preparing for a left turn|Always in the leftmost lane|Straddling the center lane line|On the shoulder to avoid congestion|New Jersey's keep-right rule reserves other lanes for circumstances such as passing and preparing for a left turn.
+Speed & passing|65|On a clear road in normal conditions, is it acceptable to drive so slowly that you block traffic?|No|Yes, at any speed below the limit|Yes, if you use high beams|Only in the left lane|Slow driving that blocks normal traffic is prohibited when conditions do not require it.
+Speed & passing|98|May you exceed the speed limit to complete a pass?|No|Yes, by 10 mph|Yes, for less than 30 seconds|Yes, if passing a truck|The manual says to pass or change lanes only when it can be done without speeding.
+Speed & passing|98|After passing, what helps you judge when to return to the right lane?|Seeing the passed vehicle in your rearview mirror with adequate clearance|Seeing only its front tire beside you|Waiting exactly one second|Hearing the other driver honk|Return only when well ahead; the rearview mirror helps confirm clearance.
+Speed & passing|99|An automobile begins passing your car. What should you do?|Stay in your lane and slow to make the pass easier|Accelerate to match it|Move toward the center line|Block its return to the lane|Do not compete with a passing driver; resume normal speed after the vehicle is well ahead.
+Speed & passing|64|In a posted 65 mph zone, what speeding threshold triggers doubled fines under the manual's rule?|10 mph or more over the limit|1 mph over the limit|Only 30 mph over the limit|Only speeds over 100 mph|The manual identifies speeding at least 10 mph above 65 mph as subject to doubled fines.
+Speed & passing|66|What is a Safe Corridor's significance for motorists?|Certain driving-offense fines are doubled|All speed limits are 65 mph|Pedestrians are forbidden|Passing is always legal|Designated Safe Corridors have doubled fines for specified offenses, including speeding and aggressive driving.
+Speed & passing|105|How are moving-violation fines treated in roadway construction zones?|They are doubled|They are waived at night|They are always $25|They apply only to commercial drivers|New Jersey doubles traffic fines for motor-vehicle violations in roadway construction zones.
+Speed & passing|74|When should you reduce speed for a curve?|Before entering the curve|Only halfway through it|After leaving it|Only if another driver brakes|Slowing before the curve helps preserve control and lane position.
+Speed & passing|155|How close to a railroad crossing should you NOT pass another vehicle?|Within 100 feet|Within 10 feet only|Within 25 feet only|Only while directly on the rails|The sharing-the-road chapter prohibits passing within 100 feet of a railroad crossing.
+Right-of-way & turns|69|Two drivers arrive at a multi-way stop at the same time. Who yields?|The driver on the left yields to the driver on the right|The driver on the right yields to the left|The smaller vehicle always yields|The driver going straight always goes first|At a simultaneous arrival, yield to the vehicle on your right.
+Right-of-way & turns|69|At a multi-way stop, another vehicle was already stopped before you arrived. What should you do?|Yield to that vehicle|Go first because you are on its right|Go first if your car is larger|Sound the horn to claim priority|The manual requires yielding to a vehicle already stopped at the intersection.
+Right-of-way & turns|69|Before turning left across opposing traffic, you must yield to whom?|Oncoming vehicles and pedestrians in the crosswalk|Only trucks|Only vehicles turning right|Only pedestrians outside crosswalks|A left turn does not grant priority over oncoming traffic or pedestrians.
+Right-of-way & turns|70|You are entering a main road from a private driveway. Who has priority?|Traffic already on the main road|You, because you are entering slowly|Whichever car is larger|You, if you use a turn signal|Traffic entering from a driveway or private road must yield to traffic on the main road.
+Right-of-way & turns|70|A traffic signal is dark because of a power failure. What should you do?|Treat the intersection as a four-way stop|Continue at the speed limit|Yield only if a car honks|Treat it as a green light|An unlit signal is treated as a four-way stop when no one is directing traffic.
+Right-of-way & turns|70|How should you approach an uncontrolled intersection with an obstructed view?|Slow down and be ready to stop for cross traffic|Accelerate before cross traffic appears|Assume the wider road has priority|Sound the horn and maintain speed|Obstructions and lack of traffic control require caution; a busy or wide road does not guarantee priority.
+Right-of-way & turns|70|What should you do before entering a traditional NJ traffic circle?|Check signs and the established flow; do not assume a universal priority rule|Assume entering traffic always has priority|Assume all circles have identical rules|Stop inside the circle regardless of traffic|Traditional circles may have different established patterns. Signs and caution determine safe entry.
+Right-of-way & turns|70|Who must yield when you merge onto a highway?|You must yield to vehicles already on the highway|Highway traffic must stop for you|The largest vehicle must yield|Only vehicles in the left lane must yield|Entering motorists yield before moving into highway traffic.
+Right-of-way & turns|71|What is an acceleration lane for?|Building speed to join the highway traffic flow safely|Parking while choosing a route|Slowing to the exit-ramp speed|Passing stopped school buses|Use the lane to approach traffic speed within legal limits and merge when safe.
+Right-of-way & turns|71|Where should you normally begin slowing for a highway exit?|In the deceleration lane|In the left through lane one mile early|After the exit ramp ends|On the shoulder before the exit|Move into the deceleration lane, then slow for the posted ramp speed.
+Right-of-way & turns|71|You miss your highway exit. What should you do?|Continue to the next exit|Reverse along the shoulder|Make a U-turn through the median|Stop and back up in the exit lane|Never back up or cross the median to recover a missed exit.
+Right-of-way & turns|72|In a weave lane, who must yield?|Entering traffic yields to traffic leaving the expressway|Exiting traffic always yields to entering traffic|The slower driver always goes first|Drivers alternate regardless of position|A weave lane serves both entering and exiting traffic; entering motorists must yield to exiting motorists.
+Right-of-way & turns|74|When is a right turn on red allowed in NJ?|After a full stop and yielding, unless a sign prohibits it|Any time the right lane is empty|After slowing without stopping|Only if the car behind honks|Check for signs, stop completely, and yield to traffic and pedestrians before turning.
+Right-of-way & turns|74|A No Turn on Red sign is posted. What should you do at a red light?|Wait for a signal permitting the turn|Turn after stopping for three seconds|Turn if no cars are visible|Turn after honking|A posted prohibition overrides the general permission to turn right on red after stopping.
+Right-of-way & turns|74|How should you position your vehicle for a normal right turn?|Approach close to the right curb or edge without swinging wide|Start from the far-left lane|Swing left before turning right|Straddle both lanes|Proper positioning reduces conflicts on your right and avoids swinging into another lane.
+Right-of-way & turns|75|When turning left from a one-way road onto a one-way road, which lanes should you use?|Approach in the left lane and turn into the left lane|Approach right and turn into the far-right lane|Use any lane without signaling|Cross all lanes during the turn|The manual specifies left lane to left lane for this turn.
+Right-of-way & turns|75|When turning left from a two-way road onto a four-lane highway, which lane should you first enter?|The lane nearest the center line on the correct side of the new road|The far-right lane by cutting across lanes|The opposing-traffic lane|The shoulder|Turn into the appropriate lane nearest the center, then move right when traffic permits.
+Right-of-way & turns|75|May a solid center line be crossed carefully to enter or leave a driveway in a business or residential area?|Yes, when safe; this is different from crossing it to pass|No, even if turning into a driveway|Yes, but only at highway speed|Only by commercial vehicles|The manual distinguishes a careful driveway turn from prohibited passing over a solid center line.
+Right-of-way & turns|76|The light turns yellow and you can stop safely before the intersection. What should you do?|Stop|Accelerate through it|Stop in the middle of the intersection|Change lanes and continue|Stop for yellow unless you are too close to stop safely.
+Right-of-way & turns|76|The light changes while you are already inside the intersection. What should you do?|Continue through cautiously|Stop in the middle and wait|Reverse to the stop line|Turn without checking traffic|Clear the intersection carefully rather than stopping or backing up inside it.
+Right-of-way & turns|76|What is a stale green light?|A light that has been green for some time and may soon change|A signal with no working bulbs|A flashing green arrow|A green light reserved for buses|Be prepared for a long-green signal to change to yellow, then red.
+Right-of-way & turns|69|Can you drive through a parking lot just to avoid a red signal?|No, using private property to avoid a signal is a violation|Yes, if you drive below 10 mph|Yes, if the lot is empty|Yes, if you use hazard lights|Driving on private property to evade a traffic signal or sign is prohibited.
+Right-of-way & turns|77|A traffic officer orders you to stop despite a green light. What should you do?|Stop as directed|Continue because the light is green|Only stop if the officer uses a whistle|Follow the vehicle ahead instead|A motorist must obey an officer's directions to stop.
+Stops, lights & parking|79|On an undivided road, how far away must you stop from a school bus with flashing red lights?|At least 25 feet|At least 10 feet|At least 15 feet|At least 100 feet|The 25-foot stopping rule applies from either direction on an undivided roadway.
+Stops, lights & parking|79|A school bus with red lights is across a raised median on a divided highway. What should you do?|Slow to 10 mph|Continue at normal speed|Stop at least 100 feet away|Accelerate past it|The manual instructs motorists on the opposite side of a safety island or raised median to slow to 10 mph.
+Stops, lights & parking|79|A school bus is stopped directly in front of a school to load children. What speed limit applies when passing under that exception?|No more than 10 mph|No more than 15 mph|No more than 25 mph|The normal posted limit|The manual permits passing from either direction at no more than 10 mph in this specific school-front situation.
+Stops, lights & parking|79|What do a school bus's flashing yellow lights indicate?|The bus is preparing to stop|You must accelerate past it|The bus is out of service|The road is closed|Yellow/amber lights come on before the bus stops; watch for children and prepare to stop.
+Stops, lights & parking|79|When may you proceed after stopping for a school bus with red lights?|After the signals turn off and you have checked for children|As soon as the door begins closing|After waiting 10 seconds|Whenever the opposite lane is clear|Signals turning off do not remove the need to watch carefully for children.
+Stops, lights & parking|80|An ice-cream truck displays flashing red lights and a stop arm on your side of the road. What should you do?|Stop, yield to people, then pass at no more than 15 mph|Pass without stopping at 25 mph|Stop and wait until the truck leaves in all cases|Pass at the posted speed limit|The frozen-dessert-truck rule requires a stop first and a maximum passing speed of 15 mph.
+Stops, lights & parking|80|An emergency vehicle approaches with siren or emergency lights. What should you do?|Move to the extreme right safely and stop until it passes|Stop in the left lane|Speed up to stay ahead|Follow closely to get through traffic|Yield by pulling right and stopping, then wait for the emergency vehicle to pass.
+Stops, lights & parking|80|How far behind a signaling emergency vehicle must you stay?|At least 300 feet|At least 25 feet|At least 50 feet|At least 100 feet|The required following distance is at least 300 feet.
+Stops, lights & parking|80|How close may you NOT park to a fire-department vehicle in service?|Within 200 feet|Within 10 feet only|Within 25 feet only|Within 50 feet only|Do not park within 200 feet of a fire-department vehicle in service.
+Stops, lights & parking|80|Under the Move Over law, what should you do for a disabled vehicle displaying hazard lights?|Change to a nonadjacent lane if safe; otherwise slow below the limit and be ready to stop|Maintain speed because it is not a police vehicle|Stop in your lane in every case|Pass on the shoulder|The manual includes disabled vehicles with hazard lights, flares or reflective triangles in Move Over protection.
+Stops, lights & parking|80|May you drive over a fire hose lying on the roadway?|Only when directed by a fire, rescue or police official|Yes, if driving a large vehicle|Yes, if the hose appears empty|Yes, after flashing headlights|Do not drive over a fire hose without direction from an authorized official.
+Stops, lights & parking|78|How far from a railroad crossing must you stop when warning devices indicate a train?|At least 15 feet|At least 5 feet|At least 10 feet|At least 300 feet|Stop at least 15 feet from the crossing when lights, bells, gates or flag signals warn of a train.
+Stops, lights & parking|78|The gates are rising, but railroad warning lights still flash. May you cross?|No, wait until all active warning devices deactivate|Yes, as soon as the gate starts moving|Yes, if you cannot see a train|Yes, after the first train passes|Wait until gates are raised, bells stop and red lights stop flashing.
+Stops, lights & parking|78|Why should you leave extra room behind a bus or hazardous-material vehicle near railroad tracks?|It may have to stop even without an approaching train|It always speeds up at crossings|It has priority over trains|It is allowed to park on the tracks|Certain vehicles must stop at railroad crossings even when the signals do not warn of a train.
+Stops, lights & parking|85|During what nighttime period are headlights legally required?|From half an hour after sunset until half an hour before sunrise|Only from midnight to 5 a.m.|Only after all streetlights turn on|Only when other cars are present|The manual states this required period; using lights at dusk and dawn also helps visibility.
+Stops, lights & parking|85|When rain requires windshield wipers, what else must you turn on?|Headlights|Only parking lights|Only the interior light|High beams in all conditions|New Jersey requires headlights when using wipers in rain, snow or ice.
+Stops, lights & parking|85|At what visibility distance must headlights be used according to the manual?|500 feet or less|Only below 50 feet|Only below 100 feet|Only beyond one mile|Headlights are required when visibility is 500 feet or less, as well as in other listed conditions.
+Stops, lights & parking|85|Can parking lights replace headlights when headlights are required?|No|Yes, inside a city|Yes, before midnight|Yes, with fog lights alone|Parking and auxiliary lights are not a legal substitute for required headlights.
+Stops, lights & parking|85|When are high beams appropriate?|Open country with no traffic in sight|When closely following another vehicle|Whenever another driver uses high beams|In heavy fog|Use high beams only where they will not blind approaching or preceding motorists.
+Stops, lights & parking|85|An approaching driver's high beams cause glare. Where should you look?|Toward the right side of the road|Directly into the lights|At the interior mirror only|At your phone until the vehicle passes|Look to the right until the vehicle passes; do not retaliate with high beams.
+Stops, lights & parking|86|How far from the curb may a vehicle be parked?|No more than six inches|No more than one foot|No more than two feet|Any distance if hazard lights are on|Parking more than six inches from the curb is illegal.
+Stops, lights & parking|87|How close to a fire hydrant is parking prohibited?|Within 10 feet|Within 5 feet|Within 25 feet|Within 50 feet|Keep at least 10 feet away from a fire hydrant.
+Stops, lights & parking|87|How close to an intersection crosswalk is parking prohibited under the listed rule?|Within 25 feet|Within 5 feet|Within 10 feet|Within 100 feet|The manual lists a 25-foot no-parking distance from a crosswalk at an intersection.
+Stops, lights & parking|87|How close to a stop sign is parking prohibited?|Within 50 feet|Within 10 feet|Within 15 feet|Within 25 feet|Parking within 50 feet of a stop sign is prohibited.
+Stops, lights & parking|87|How close to a railroad crossing is parking prohibited?|Within 50 feet|Within 5 feet|Within 10 feet|Within 25 feet|The parking clearance is 50 feet; do not confuse it with the 15-foot train-warning stopping distance.
+Stops, lights & parking|87|What parking clearance applies on the same side as a fire-station driveway entrance?|20 feet|10 feet|50 feet|75 feet|The manual lists 20 feet on the same side and 75 feet on the opposite side.
+Stops, lights & parking|87|What parking clearance applies opposite a fire-station driveway entrance?|75 feet|10 feet|20 feet|25 feet|The opposite-side clearance is 75 feet, not the same-side 20-foot distance.
+Stops, lights & parking|87|Is double parking allowed just because you remain in the vehicle?|No|Yes, for five minutes|Yes, with the engine off|Yes, with hazard lights on|Parking beside a vehicle already parked at the curb is prohibited.
+Stops, lights & parking|86|Before opening your door on the traffic side after parking, what should you do?|Check for moving traffic, bicycles and mopeds|Open it immediately to claim space|Look only straight ahead|Assume approaching riders will stop|Opening a door into another road user's path can cause a crash and liability.
+Defensive driving|92|What is the manual's crash-prevention formula?|Be alert, be prepared, act in time|Brake late, honk, accelerate|Follow closely, pass often, hurry|Rely on others, then react|Anticipate others' mistakes, know what to do and act promptly without panic.
+Defensive driving|93|What is tailgating?|Following another vehicle too closely|Parking close to a curb|Turning from the correct lane|Using a deceleration lane|Tailgating removes reaction space and is a common cause of rear-end crashes.
+Defensive driving|97|Under good conditions, which time-gap guideline does the manual recommend?|Three seconds or more|Half a second|One second exactly|Never more than two seconds|The three-seconds-plus rule is a practical way to judge following distance.
+Defensive driving|97|How do you measure a following gap using the three-second rule?|Count from when the vehicle ahead passes a fixed object until you pass it|Count the cars behind you|Time how long you press the brake|Estimate your distance from the next exit|A stationary reference lets you compare the time gap regardless of speed.
+Defensive driving|97|What following interval should you use in bad weather?|Four or more seconds, increasing further as needed|Exactly one second|Less than the normal gap|The same gap at every speed and condition|The manual increases the good-weather gap to four or more seconds in bad weather.
+Defensive driving|101|What following interval does the manual recommend on snow-covered roads?|Six seconds or more|One second|Two seconds|Three seconds at most|Snow-covered roads need more time and space for safe stopping.
+Defensive driving|97|What makes up total stopping distance?|Perception distance, reaction distance and braking distance|Only the distance after the brakes engage|Only the tire circumference|The distance to the nearest speed sign|Stopping includes recognizing the hazard, reacting and slowing the vehicle to a stop.
+Defensive driving|97|What can keeping your foot near the brake reduce?|Reaction distance|Vehicle weight|The posted speed limit|The tire's tread wear instantly|Reducing the time needed to move to the pedal reduces distance traveled before braking begins.
+Defensive driving|98|At 30 mph on wet pavement, what following distance appears in the manual's car-length table?|Six car lengths|Three car lengths|One car length|Twelve car lengths|The table doubles the ideal three-car-length distance to six on wet pavement at 30 mph.
+Defensive driving|99|What is hydroplaning?|Tires riding on a film of water and losing contact with the road|Brakes becoming warmer on dry roads|Driving uphill in a low gear|A normal effect of headlights in fog|Water can separate the tires from the road, reducing steering and braking control.
+Defensive driving|99|At about what speed can hydroplaning begin according to the manual?|35 mph|5 mph|Only above 65 mph|Only above 80 mph|The manual warns that hydroplaning can start at about 35 mph; it is not a guaranteed safe-speed threshold.
+Defensive driving|99|What helps reduce the risk of hydroplaning?|Slow down and maintain tires with adequate tread|Use cruise control through deep water|Accelerate across puddles|Inflate tires far beyond their recommended pressure|Lower speeds and sound tires help preserve contact with wet pavement.
+Defensive driving|100|Which action can cause a skid on a slippery road?|Abrupt acceleration, turning or braking|Gentle speed adjustments|Allowing more following distance|Removing snow before driving|Sudden changes in tire forces can overcome the limited available traction.
+Defensive driving|101|When may studded snow tires be used in New Jersey?|November 15 through April 1|All year|June 1 through September 1|Only during January|The manual specifies the November 15-April 1 seasonal window.
+Defensive driving|101|Which lights should you use in fog?|Low beams, with fog lights if equipped|High beams only|Parking lights only|No lights during daylight|Low beams reduce glare and help visibility in fog; slow down too.
+Defensive driving|102|What does driving within your headlights' range mean?|Being able to stop within the distance you can see illuminated ahead|Driving at the highest posted limit regardless of visibility|Watching only the vehicle immediately ahead|Using parking lights in well-lit areas|At night, reduce speed so the visible distance is long enough for stopping.
+Defensive driving|103|In city driving, how far ahead should you look?|At least 12 seconds ahead|Only at the bumper ahead|One second ahead|Only at the next lane marking|Looking at least 12 seconds ahead helps identify intersections, traffic and pedestrians early.
+Defensive driving|94|Looking down at a navigation screen is what kind of distraction?|Visual|Only auditory|Only mechanical|Not a distraction at low speed|A visual distraction takes your eyes off the road; navigation should be set before moving.
+Defensive driving|94|Taking a hand off the steering wheel to reach for an item is what kind of distraction?|Manual|Only visual|Only auditory|Not a distraction if the road is straight|A manual distraction takes your hands away from driving controls.
+Defensive driving|94|Thinking intensely about an unrelated problem while driving is what kind of distraction?|Cognitive|Only mechanical|Only auditory|Not a distraction unless you look away|Cognitive distraction takes attention away from driving even when your eyes face the road.
+Defensive driving|94|What does Maggie's Law address?|Knowingly driving while impaired by lack of sleep|Using snow tires in winter|Registering a new vehicle|Driving without a toll transponder|The law treats driving while fatigued as recklessness under the vehicular-homicide statute.
+Defensive driving|95|On a long drive, how often does the manual recommend resting?|Every two hours|Only after eight hours|Only when fuel runs out|Once per day|Regular breaks and sharing driving with another licensed driver help reduce fatigue.
+Defensive driving|94|What helps avoid highway hypnosis?|Keep your eyes moving rather than staring at one thing|Stare steadily at the center line|Follow the same taillights closely|Turn up music and ignore fatigue|Avoid prolonged fixation; rest when tired rather than relying on stimulation to stay awake.
+Defensive driving|92|You are angry before starting a drive. What is the best choice?|Take time to calm down before driving|Drive faster to release frustration|Challenge drivers who cut you off|Ignore all other road users|Strong emotions affect judgment and can lead to aggressive driving.
+Defensive driving|105|What should you do when a work-zone flagger directs you to stop?|Stop and follow the flagger's directions|Proceed if your usual lane is open|Only obey permanent traffic lights|Honk until the flagger moves|Flaggers control work-zone traffic; their directions must be followed.
+Emergencies & crashes|106|Your rear wheels begin sliding right. What should you do?|Ease off the accelerator and steer right without oversteering|Steer sharply left and brake hard|Accelerate hard|Turn the ignition to lock|Steer in the direction the rear is sliding, look where you want to go and avoid braking during a side skid.
+Emergencies & crashes|107|Your wheels drift onto the shoulder. What should you do first?|Ease off the accelerator and regain control before returning gradually|Jerk the wheel back immediately|Brake hard while turning sharply|Accelerate before steering|A sudden return can sling the vehicle across traffic; slow and regain control first.
+Emergencies & crashes|109|A tire blows out while driving. What is the recommended response?|Grip the wheel, stay straight, ease off the gas and coast to safety|Slam on the brakes|Turn sharply toward the shoulder|Accelerate until the tire stabilizes|Avoid braking suddenly; maintain direction while slowing gradually.
+Emergencies & crashes|110|The accelerator sticks. What should you do?|Shift to neutral, steer to a safe place, then turn off the engine|Shift to park while moving fast|Look down and pull at the pedal while driving|Turn the ignition to lock immediately|Neutral disconnects engine power from the wheels so you can steer to a safe stopping place.
+Emergencies & crashes|106|Why must you never turn the ignition to the lock position while moving?|The steering can lock|It makes the horn louder|It automatically releases the seat belt|It restores tire traction|A locked steering system removes your ability to control direction.
+Emergencies & crashes|109|Conventional brakes fail. What does the manual advise first?|Shift to a lower gear and pump the pedal rapidly to try to build pressure|Accelerate to restart the brakes|Turn sharply from side to side|Shift directly into park|This is a brake-failure procedure, not the normal ABS braking technique.
+Emergencies & crashes|109|Power steering assistance fails. What should you expect?|Steering will require extra effort; grip firmly and stop safely|The vehicle will steer itself|No steering input will ever be possible|Accelerating will always restore it|Loss of power assistance makes steering harder; maintain control and leave the roadway safely.
+Emergencies & crashes|109|Your headlights suddenly fail at night. What is the priority?|Get safely off the roadway and seek help|Continue at normal speed with the dome light|Follow another vehicle closely|Use a phone flashlight while driving|Try the switches if safe, use available warning lights and stop safely rather than continuing unlit.
+Emergencies & crashes|110|Your windshield wipers fail during heavy rain. What should you do?|Slow down, pull safely off the road and use hazard lights|Continue at the speed limit|Accelerate to blow the water away|Drive while looking through an open side window indefinitely|Without adequate visibility, leave the roadway safely and obtain help.
+Emergencies & crashes|110|The hood flies up and obstructs your view. What should you do?|Slow immediately, use the available view and pull safely off the roadway|Brake and stop in the middle of the highway|Accelerate until the hood closes|Turn sharply without looking|Use a view under or around the hood to guide the car to a safe stopping place.
+Emergencies & crashes|108|Your vehicle catches fire. What is the first priority?|Get everyone out and away, then call for help|Open the hood and try to fight the fire|Stay inside with the windows closed|Drive to the next gas station|The manual says to evacuate and call for help rather than attempt to extinguish the fire.
+Emergencies & crashes|108|A vehicle enters water and is still afloat. What is the immediate escape approach described in the manual?|Open a window promptly and get out|Wait inside for several minutes|Wait for the engine to restart|Keep the windows shut until rescuers arrive|Open an available window immediately; do not delay escape or rely on any estimated floating time.
+Emergencies & crashes|108|Your car stalls on railroad tracks. What should everyone do?|Get out immediately, move well away, and call the crossing emergency number or 911|Stay inside and keep restarting it|Push it alone while passengers stay inside|Wait until a train is visible|Leave the vehicle and tracks even if no train is currently visible.
+Emergencies & crashes|108|If a train approaches your stalled car, in which direction should you move?|Away from the tracks at a 45-degree angle toward the approaching train|Along the tracks away from the train|Toward the stalled vehicle|Stand immediately beside the rails|Moving away and toward the train's approach reduces the risk from debris thrown forward by an impact.
+Emergencies & crashes|112|You hit a parked vehicle. What should you do?|Notify police and try to locate the owner|Leave if damage looks minor|Only tell your passengers|Drive away if no one saw it|The manual requires police notification and an attempt to find the owner.
+Emergencies & crashes|113|A crash causes injury or more than $500 in property damage and police file no report. When must you send a written report to MVC?|Within 10 days|Within 24 hours|Within 30 days|Only at license renewal|A written MVC report is required within 10 days in these circumstances if no police report is filed.
+Emergencies & crashes|113|When must you notify your insurer after a reportable crash?|At once, with complete information|Only if the other driver calls first|At the next policy renewal|Only after a court case ends|Promptly provide the insurer with complete information about the crash.
+Emergencies & crashes|83|During a traffic stop, where should you generally keep your hands?|Visible, preferably on the steering wheel|Under the seat|Inside the glove compartment|Outside the window holding documents before being asked|Remain in the vehicle unless instructed otherwise, keep hands visible and avoid sudden reaches.
+Alcohol, drugs & health|116|What is the only thing that makes a person sober after drinking?|Time|Coffee|A cold shower|Exercise|The body needs time to eliminate alcohol; quick-sobering methods do not work.
+Alcohol, drugs & health|117|What BAC makes driving illegal for an adult under NJ's per se alcohol rule?|0.08% or higher|0.8% or higher|0.10% or higher only|0.15% or higher only|The threshold is 0.08%; impairment can still make driving illegal below that number.
+Alcohol, drugs & health|117|What BAC threshold applies to NJ's under-21 drinking-and-driving rule?|0.01%|0.08%|0.10%|0.15%|Drivers younger than 21 face the underage rule beginning at 0.01% BAC.
+Alcohol, drugs & health|117|Which factors does the manual list as affecting BAC?|Amount consumed, body weight, drinking speed and food eaten|Only the beverage's color|Only the time of day|Only how confident the driver feels|BAC depends on several factors; subjective confidence is not a reliable measurement.
+Alcohol, drugs & health|117|Does eating food make it safe to drive after drinking heavily?|No, food may slow absorption but does not make you sober|Yes, if the meal is large|Yes, if you drink water too|Yes, after 10 minutes|Food does not prevent a high BAC during heavy drinking or eliminate impairment.
+Alcohol, drugs & health|117|Which serving is comparable to a typical 12-ounce beer in the manual's drink comparison?|A 5-ounce glass of wine|A 20-ounce glass of wine|Any size mixed drink|An entire bottle of wine|Typical standard servings can contain similar amounts of alcohol; serving size and strength matter.
+Alcohol, drugs & health|116|How can alcohol affect a driver's judgment?|It can create false confidence and impair judgment|It reliably improves reaction time|It makes distance judgment more accurate|It eliminates the need for rest|Alcohol can make drivers overconfident even as their actual driving ability worsens.
+Alcohol, drugs & health|117|According to the manual, a BAC slightly above 0.05% changes crash risk how?|It approximately doubles the risk|It eliminates the risk|It has no effect until 0.08%|It reduces risk by half|The manual's risk comparison shows danger increases below the adult per se threshold.
+Alcohol, drugs & health|117|What crash-risk comparison does the manual give for BAC 0.10%?|About six times the risk|No additional risk|Twice the risk|One-half the risk|The manual reports a sixfold crash risk at a BAC of 0.10%.
+Alcohol, drugs & health|117|What crash-risk comparison does the manual give for BAC 0.15%?|About 25 times the risk|About twice the risk|No change|About six times the risk|The manual reports a 25-fold crash risk at a BAC of 0.15%.
+Alcohol, drugs & health|119|Before taking a medicine that may cause drowsiness, what should you consider?|Its effects on driving and professional guidance|Only whether it is sold without a prescription|Only whether you have taken it once before|Whether caffeine can cancel every effect|Prescription and over-the-counter medicines can impair driving; read warnings and ask a professional.
+Alcohol, drugs & health|119|Is a medicine automatically safe for driving because it is prescribed?|No, prescribed medicines can impair driving|Yes, all prescriptions are exempt|Yes, when taken with alcohol|Yes, if the trip is short|A valid prescription does not remove sedating or other impairing effects.
+Alcohol, drugs & health|119|How can marijuana affect driving?|It can impair tracking, distance judgment and attention|It always improves lane control|It makes following distance irrelevant|It affects passengers but not drivers|The manual identifies impairment of tracking ability, distance judgment, vigilance and divided attention.
+Alcohol, drugs & health|119|What is the safest transportation plan when alcohol will be served?|Arrange a sober designated driver or other safe transportation|Choose the person who drank the least to drive|Drink coffee before leaving|Wait until you feel confident|Plan a sober ride rather than relying on subjective estimates of impairment.
+Alcohol, drugs & health|118|A party guest has drunk too much. What should a host do?|Prevent them from driving and arrange safe transportation or a stay|Give them coffee and their keys|Tell them to drive slowly|Ask them to follow another car home|Do not let an impaired guest drive; safe transport or staying overnight is preferable.
+Alcohol, drugs & health|120|Why does loud audio create a driving problem?|It can mask horns, sirens and other warning sounds|It makes the speedometer inaccurate|It disables the brakes|It automatically reduces speed|Hearing warnings is part of safe driving; keep audio at a level that allows awareness.
+Alcohol, drugs & health|120|What should a driver do when an illness makes safe driving difficult?|Let someone else drive|Ignore it if the road is familiar|Compensate by driving faster|Use high beams to stay alert|Even seemingly minor health problems can interfere with vehicle control and attention.
+Penalties & privileges|124|Is driving in New Jersey a right or a privilege?|A privilege that can be suspended|An unconditional right|A right once you own a car|A privilege only for teenagers|The state can suspend driving privileges for specified violations and other disqualifying conditions.
+Penalties & privileges|124|How does the manual define a habitual offender?|A driver suspended three times in three years|A driver with one parking ticket|A driver who renews late once|A driver with three different vehicles|Three suspensions within three years meet the manual's habitual-offender definition.
+Penalties & privileges|129|What does NJ's implied-consent law mean?|Driving on NJ roads implies agreement to a breath test following an intoxicated-driving arrest|A driver may refuse without consequence|Only commercial drivers must take breath tests|Signing an insurance policy replaces a breath test|The implied-consent rule relates to testing following arrest for an intoxicated-driving offense.
+Penalties & privileges|129|What annual violation surcharge does the manual list for refusing a breath test?|$1,000 per year for three years|$100 once|$250 once|No surcharge|Refusal has its own serious consequences; the manual lists a three-year $1,000 annual surcharge.
+Penalties & privileges|129|What does an ignition interlock do?|Uses a breath test to prevent starting when BAC exceeds its threshold|Replaces the vehicle's seat belts|Automatically steers an impaired driver home|Removes all DUI penalties|The device is attached to the vehicle and checks the driver's breath before allowing a start.
+Penalties & privileges|129|What ignition-interlock BAC threshold is stated in the supplied manual?|It prevents starting if BAC exceeds 0.05%|It allows starting at every BAC|It only blocks starts above 0.15%|It checks only for prescription drugs|The supplied manual describes a built-in breathalyzer with a 0.05% threshold.
+Penalties & privileges|126|For a first underage offense at BAC 0.01% to below 0.08%, what suspension range does the manual list?|30-90 days|One day|Three years|No suspension|The underage first-offense section also lists community service and an education or IDRC requirement.
+Penalties & privileges|126|What community-service range is listed for that first underage BAC offense?|15-30 days|One hour|90-180 days|None|For BAC at least 0.01% but below 0.08%, the underage section lists 15-30 days of community service.
+Penalties & privileges|125|For a first DUI with BAC at least 0.08% but below 0.10%, what base fine is listed, before added charges?|$250-$400|$25-$75|$50-$100|$2,500-$5,000|The base fine is only one consequence; fees, surcharges and other penalties also apply.
+Penalties & privileges|138|What surcharge is listed for six points within three years?|$150, plus $25 for each additional point|$25 total regardless of points|$1,000 per point|No surcharge until 20 points|Point-based surcharges are separate from court fines and use the specified three-year period.
+Penalties & privileges|138|A motorist has eight surcharge-counted points within three years. What is the calculated point surcharge?|$200|$150|$175|$250|Six points cost $150, plus two additional points at $25 each, totaling $200.
+Penalties & privileges|139|How many points may be removed after a violation- and suspension-free year in good standing?|Up to three, without going below zero|Ten regardless of balance|All points automatically|Exactly five|The annual reduction is up to three points and cannot create a negative balance.
+Penalties & privileges|137|How many points may an approved defensive-driving course remove?|Two|One|Five|Ten|An approved defensive-driving course can remove two accumulated points.
+Penalties & privileges|137|How often does MVC recognize a defensive-driving course for point reduction?|Once every five years|Once every month|Once every year|Unlimited times in one year|The five-year limit applies to the point-reduction benefit.
+Penalties & privileges|136|What triggers the Probationary Driver Program during the initial two-year driver period?|Two or more moving violations totaling four or more points|Any one parking ticket|A single two-point violation only|Owning more than one vehicle|Both the number of moving violations and the point total matter.
+Penalties & privileges|136|What follows completion of a Driver Improvement Program or restoration of driving privileges?|A one-year probationary period|Immediate immunity from points|A permanent road-test exemption|Automatic cancellation of insurance|A moving violation during that one-year period can result in a scheduled suspension.
+Penalties & privileges|141|How many points does tailgating carry in the manual's chart?|Five|Two|Three|Eight|Following too closely is listed as a five-point moving violation.
+Penalties & privileges|141|How many points does reckless driving carry?|Five|One|Two|Three|The point chart assigns five points to reckless driving.
+Penalties & privileges|141|How many points apply for speeding 1-14 mph over the limit?|Two|One|Four|Five|The lowest speeding band in the chart carries two points.
+Penalties & privileges|141|How many points apply for speeding 15-29 mph over the limit?|Four|Two|Three|Five|The middle speeding band carries four points.
+Penalties & privileges|141|How many points apply for speeding 30 mph or more over the limit?|Five|Two|Three|Four|The highest listed speeding band carries five points.
+Penalties & privileges|142|How many points does improper passing of a school bus carry?|Five|Two|Three|Four|The school-bus passing violation carries five points in the manual's chart.
+Penalties & privileges|139|How many points does NJ generally add for an out-of-state moving violation under the manual's rule?|Two|Zero|One|Ten|Out-of-state violations may become part of the NJ driving record and carry two points.
+Penalties & privileges|88|What is the first-offense fine range for prohibited handheld-phone use while driving?|$200-$400|$25-$75|$50-$100|$600-$800|The manual lists increasing fines for repeated handheld-device violations.
+Penalties & privileges|131|What is the fine range for failing to remove snow or ice before driving, even without damage?|$25-$75|$5-$10|$200-$1,000 in every case|No fine unless someone is injured|Failing to clear snow or ice can be fined even if nothing dislodges.
+Sharing the road|68|A pedestrian is in a marked crosswalk. What must a driver do?|Stop and remain stopped until the pedestrian clears the driver's lane and adjacent same-direction lane|Only honk to warn them|Slow slightly and continue in front of them|Stop only if a crossing guard is present|The manual calls for a full stop and continued protection while the pedestrian clears the relevant lanes.
+Sharing the road|146|Are crosswalks always painted?|No, unmarked crosswalks also exist at intersection corners|Yes, paint is required for every crosswalk|Only outside cities|Only near traffic lights|Do not assume pedestrians lack crossing rights simply because there are no painted stripes.
+Sharing the road|146|A pedestrian started on WALK, but the signal changes while they are crossing. What should a driver do?|Continue to allow them to cross safely|Proceed immediately and force them back|Honk and drive around them|Assume they lost all protection|Drivers must protect pedestrians who are still completing the crossing.
+Sharing the road|77|A blind pedestrian uses a white cane or guide dog to cross. What must a motorist do?|Stop|Sound the horn and continue|Expect the pedestrian to yield|Pass behind without slowing|The manual specifically requires stopping for a blind pedestrian using a cane or trained guide dog.
+Sharing the road|148|On a single-lane road, what clearance does NJ's Safe Passing Law call for when passing a cyclist?|At least four feet|One foot|Two feet|Six inches|Give vulnerable road users at least a four-foot safety zone when passing on a single-lane road.
+Sharing the road|152|You cannot give a cyclist four feet of space. What should you do?|Slow to 25 mph or less as conditions require, be ready to stop, and wait for a safe pass|Squeeze past at the posted limit|Honk until the cyclist leaves the road|Cross a no-passing line regardless of traffic|The law does not authorize an unsafe close pass; slow and wait until passing will not endanger the road user.
+Sharing the road|152|An adjacent lane is available and safe when approaching a vulnerable road user. What should you do?|Move over one lane while obeying passing and speed laws|Stay as close as possible to the road user|Use the shoulder instead|Accelerate above the limit|The Safe Passing Law prioritizes moving over a lane when possible.
+Sharing the road|153|You plan to turn right while a bicyclist is moving straight through the intersection. What should you do?|Yield and avoid turning across the bicyclist's path|Turn first because cars are larger|Honk and force the bicyclist to stop|Ignore the bicyclist if you signaled|Check for bicyclists and allow them through rather than making a right-turn conflict.
+Sharing the road|148|Why should you check blind spots twice before turning or changing lanes near motorcycles?|Motorcycles are smaller and easier to overlook|Motorcycles always have extra mirrors|Motorcycles cannot use public roads|Motorcycles always stop farther away than trucks|Failing to detect a motorcycle is a major cause of motorcycle crashes.
+Sharing the road|148|A motorcycle ahead moves around a small pavement defect. How should you respond?|Allow room and anticipate its maneuver|Tailgate to discourage it|Assume the rider is making a turn|Pass within the same space immediately|Road defects that are minor for cars can be serious hazards for motorcycles.
+Sharing the road|149|What is a truck's no-zone?|An area where the driver cannot see surrounding vehicles well|A lane reserved for trucks only|Any toll road|A truck's legal parking space|No-zones are large blind spots around trucks, tractor-trailers and buses.
+Sharing the road|150|A truck is backing toward a loading area. What should you do?|Stay well away and never pass close behind it|Drive through the gap behind it|Assume the driver can see you|Stop directly behind its bumper|The truck hides objects between it and the loading area; that rear no-zone is dangerous.
+Sharing the road|151|A truck swings left before a right turn. Where should you NOT go?|Between the truck and the right curb|Well behind the truck|Into a safe lane away from its turn|To a safe stopping position|A large truck may need that space to turn; squeezing along its right side risks a collision.
+Sharing the road|151|When may you move back in front of a truck after passing?|When its whole front is visible in your rearview mirror and there is ample space|As soon as your rear bumper passes its front bumper|After one second regardless of distance|Whenever the truck honks|Give trucks space to stop; do not cut closely in front.
+Sharing the road|151|Why leave extra space when stopped behind a truck on a hill?|It may roll back slightly when starting|It always reverses through intersections|Its lights cannot work uphill|It will automatically change lanes|Extra clearance protects you from a large vehicle's possible rollback.
+Sharing the road|152|A bus signals to re-enter traffic after a passenger stop. What should you do?|Yield so it can re-enter safely|Speed up to block it|Yield only if it is a school bus with red lights|Never yield to a bus|Non-emergency vehicles must yield to buses re-entering traffic after picking up or dropping off passengers.
+Sharing the road|155|Traffic beyond a railroad crossing is backed up. When should you enter the crossing?|Only when there is room to clear all tracks completely|Whenever the gates are up, even if you must stop on tracks|When the car behind honks|When you can stop halfway across|Never enter a crossing if traffic can trap your vehicle on the tracks.
+Sharing the road|155|Why is racing a train to a crossing especially dangerous?|Trains can appear slower and farther away than they are and need a long distance to stop|Trains always stop for road traffic|Trains can swerve away|Railroad gates guarantee you can beat the train|A freight train can take a mile or more to stop; never gamble on its speed or distance.
+Vehicle ownership|160|Before driving a newly purchased vehicle on public roads, what must an NJ resident do?|Title, register and insure it|Only attach a handwritten plate|Only pay for fuel|Only obtain a repair estimate|Ownership alone is not enough; the required title, registration and insurance must be arranged.
+Vehicle ownership|160|How long is an initial registration for a brand-new vehicle generally valid?|Four years|Six months|One year|Ten years|The manual lists four years for an initial brand-new-vehicle registration; other registrations are typically annual.
+Vehicle ownership|160|After moving to NJ, when must a vehicle be titled and registered?|Within 60 days or sooner if the out-of-state registration expires|Within one year|Only when the vehicle is sold|Within 180 days regardless of expiration|The earlier registration-expiration date may shorten the 60-day window.
+Vehicle ownership|161|How many license plates are normally displayed on an NJ passenger car?|Two, one front and one rear|One, rear only|One, front only|Three, including the windshield|Passenger vehicles receive two matching plates, unlike motorcycles, mopeds and trailers.
+Vehicle ownership|161|From what distance must the rear plate be visible at night with its light?|50 feet|5 feet|10 feet|500 feet|The rear plate must be lighted so it is visible from 50 feet.
+Vehicle ownership|161|Your license plates are stolen. What should you do?|Report to local police, retain the complaint and inform MVC|Ignore it until renewal|Make paper duplicates|Borrow another vehicle's plates|Report the loss and follow MVC's replacement process rather than using invalid plates.
+Vehicle ownership|161|You sell your car and will not transfer its plates to another vehicle. What should you do?|Surrender the plates to MVC and keep the receipt|Leave them with the buyer automatically|Throw them away|Use them as decoration on another car|Unused plates must be surrendered; retain the receipt.
+Vehicle ownership|162|How often do applicable gasoline passenger vehicles model year 1996 or newer and over five model years old need state inspections?|Every two years|Every month|Every six months|Every five years|This is the manual's biennial rule for the specified passenger vehicles; other vehicle categories have different requirements.
+Vehicle ownership|162|What initial inspection period applies to new passenger vehicles described in the manual?|Five years|Six months|One year|Ten years|New passenger vehicles receive a dealer inspection sticker expiring five years after initial registration.
+Vehicle ownership|162|Which documents must you bring for a vehicle inspection?|Valid license, NJ registration and insurance documents|Only a vehicle title|Only a utility bill|Only the purchase receipt|The inspection facility requires current driver, registration and insurance credentials.
+Vehicle ownership|163|Is motor vehicle liability insurance mandatory in NJ?|Yes, for every NJ-registered vehicle|Only for highway trips|Only for vehicles with loans|Only after a crash|The manual states that every vehicle registered in NJ must have liability insurance.
+Vehicle ownership|163|May an electronic version of the insurance ID card be used?|Yes|No, paper is always the only option|Only when buying fuel|Only after it expires|The manual explicitly accepts an electronic insurance ID card.
+Signs & markings|216|What does this eight-sided red sign require?|A complete stop|Slow down only|Yield only to trucks|Proceed if you honk|The octagon is reserved for STOP signs. Stop completely and proceed only when safe.|stop
+Signs & markings|216|What does this inverted triangle mean?|Yield the right-of-way|Stop in every case even with no traffic|Railroad crossing ahead|No passing zone|A YIELD sign requires slowing and giving priority, stopping if necessary.|yield
+Signs & markings|218|What instruction does this sign give?|Do not enter this roadway|No parking only|Road narrows ahead|Traffic must turn right|The red circle and white bar mark a prohibited entry; look for the correct route.|do-not-enter
+Signs & markings|224|What does this red rectangular sign warn you about?|You are going against the permitted direction of traffic|The road is slippery|The lane is for buses|Parking is prohibited|WRONG WAY warns that you are entering or traveling against traffic. Correct course safely.|wrong-way
+Signs & markings|216|What does a yellow diamond-shaped sign generally indicate?|A roadway hazard or warning|A mandatory parking location|A hospital entrance|A fuel station|Yellow diamonds warn of road conditions requiring caution.|warning
+Signs & markings|216|What does this yellow pennant indicate?|A no-passing zone|A passing lane begins|A school crossing|A rest area|The yellow pennant is the distinctive no-passing warning shape.|no-passing
+Signs & markings|216|What is the five-sided yellow sign shape used for?|School warnings|Railroad crossbucks|Hospitals|Interstate exits|A pentagon is the school-sign shape listed in the manual.|school
+Signs & markings|216|What does this round yellow railroad sign indicate?|A railroad crossing ahead|A railroad station parking area|A mandatory U-turn|The tracks are closed to trains|The circular yellow sign is an advance railroad warning, not permission to cross.|railroad
+Signs & markings|218|What does a white X-shaped crossbuck require?|Yield to trains|Always accelerate across the tracks|Park before every crossing|Ignore other railroad signals|The crossbuck has the meaning of a yield sign: trains have priority.|crossbuck
+Signs & markings|216|What do orange diamond-shaped signs usually concern?|Construction and road maintenance|Recreation destinations|Hospitals|School buses only|Orange warning signs identify temporary work-zone conditions.|road-work
+Signs & markings|216|What does a blue sign generally provide?|Motorist services or information|Construction warnings|No-passing instructions|School-zone speed limits|Blue service signs identify facilities such as hospitals, fuel or rest areas.|hospital
+Signs & markings|216|What does a brown guide sign generally identify?|Recreation or scenic destinations|Mandatory lane changes|Railroad gates|A DUI checkpoint|Brown guidance signs point to public recreation and scenic sites.|recreation
+Signs & markings|216|What does a green guide sign generally provide?|Directions and destinations|A requirement to stop|A warning to reduce tire pressure|A ban on pedestrian crossings|Green guidance signs identify routes and destinations.|guide
+Signs & markings|217|What does this white vertical rectangular sign indicate?|A regulatory speed limit|An optional speed recommendation|A minimum following distance|A route number|Regulatory signs use white backgrounds and black text; speed limits must be obeyed.|speed-limit
+Signs & markings|223|What does this symbol prohibit?|U-turns|All left turns|Parking|Passing bicycles|The crossed U-turn arrow prohibits making a U-turn.|no-u-turn
+Signs & markings|224|What does this crossed-out arrow prohibit?|Right turns|Left turns|All forward movement|Lane changes to the left|The red slash over the right-turn arrow means no right turn.|no-right-turn
+Signs & markings|224|What does this arrow sign tell you?|Traffic on this roadway moves in one direction|Any lane may travel in either direction|Passing is prohibited|The road is closed|ONE WAY signs identify the permitted direction of traffic.|one-way
+Signs & markings|223|What does a red slash over a parking symbol mean?|No parking|Parking is free|Only trucks may park|Parking is required|A prohibition symbol marks an action that is not permitted.|no-parking
+Signs & markings|214|A traffic signal flashes red at an ordinary intersection. What should you do?|Stop, yield and proceed only when safe|Slow without stopping|Wait for it to turn green|Accelerate through|A flashing red traffic signal requires a stop, similar to a stop sign.
+Signs & markings|214|A traffic signal flashes yellow. What should you do?|Slow down and proceed cautiously|Stop until it turns green|Treat it as a railroad gate|Accelerate to clear the intersection|Flashing yellow warns you to use caution; it does not by itself require a full stop.
+Signs & markings|214|What does a green arrow with a red circular light permit?|Proceed only in the arrow's direction, yielding to pedestrians|Proceed in every direction|Ignore crosswalks|Make only a U-turn|A green arrow authorizes movement in the indicated direction, not all directions.
+Signs & markings|214|Where is the red light in a vertical traffic signal?|At the top|At the bottom|In the center|Its position changes daily|The standard vertical order is red, yellow, then green.
+Signs & markings|214|Where is the red light in a horizontal traffic signal?|On the left|On the right|Always in the middle|Below the green light|The manual specifies red on the left for horizontal signals.
+Signs & markings|215|What does a steady orange raised-hand pedestrian signal mean for someone still on the sidewalk?|Do not start crossing|Start crossing immediately|Cross only diagonally|Run before traffic moves|Pedestrians who have not started should remain on the sidewalk; those already crossing should complete safely.
+Signs & markings|215|What does a steady white walking-person signal mean?|Pedestrians may cross in the indicated direction|Pedestrians must remain on the curb|Only cars may cross|The road is closed to everyone|Turning motorists must yield to pedestrians crossing on the walk signal.
+Signs & markings|218|What do yellow center lines separate?|Traffic traveling in opposite directions|Only bicycle lanes|Traffic moving in the same direction|Parking spaces only|Yellow center lines divide opposing traffic flows.
+Signs & markings|218|What do white lane lines generally separate on a multilane roadway?|Traffic moving in the same direction|Traffic moving in opposite directions|Only school buses|Only toll-paying traffic|White lines separate same-direction lanes and can also mark roadway edges.
+Signs & markings|219|What does a solid white line across the lane at a stop sign indicate?|Where to stop|Where to accelerate|A legal parking space|The start of a passing zone|A transverse white stop line shows the stopping position.
+Signs & markings|219|A white diamond painted in a lane commonly marks what?|A high-occupancy vehicle lane, subject to posted restrictions|A mandatory stopping point|A railroad crossing|A no-parking area|Read the accompanying signs for eligible vehicles, occupancy and operating hours.
+Signs & markings|219|What does an orange reflective triangle on the rear of equipment indicate?|A slow-moving vehicle|A police vehicle|A hazardous-material load in every case|An express bus|The slow-moving-vehicle emblem warns approaching traffic about slow farm or construction equipment.
+Signs & markings|219|Which railroad warning devices are active rather than passive?|Flashing lights, ringing bells and moving gates|Painted R X R markings only|A crossbuck alone|An advance warning sign alone|Active devices operate when a train approaches; signs and pavement markings are passive.
+Signs & markings|220|What is the purpose of rumble strips?|Warn through vibration and sound about lane departure or a decision point ahead|Increase tire pressure|Mark a parking area|Make passing easier|Rumble strips alert an inattentive driver and often accompany warning signs.
+Signs & markings|220|How does traffic move through a roundabout?|One way around a center island|In both directions around the same island|Always straight across the island|In whichever direction has less traffic|Roundabouts are circular one-way intersections; follow the posted controls.
+Signs & markings|222|A Slippery When Wet warning sign means what?|Reduce speed and avoid abrupt movements when the road is wet|The road is closed permanently|Only motorcycles must slow|Increase speed to keep traction|Wet surfaces can reduce traction; use smooth steering and braking and more space.
+Signs & markings|222|A Lane Reduction Ahead sign calls for what action?|Prepare to merge safely as a lane ends|Accelerate to block merging vehicles|Drive on the shoulder|Stop immediately in every case|Read the warning early, signal and adjust speed and space for a safe merge.
+Signs & markings|223|A Bike May Use Full Lane sign tells drivers what?|Expect bicycles to occupy the travel lane|Bicycles must always ride on the sidewalk|Cars may force bicycles onto the shoulder|Only bicycles may use the road|Give cyclists appropriate space and follow safe-passing rules rather than assuming they must hug the curb.
+Testing & documents|24|Can an International Driving Permit replace a valid driver license?|No, it accompanies a valid license|Yes, everywhere in NJ|Yes, for any resident indefinitely|Yes, if it has a photograph|An IDP is an additional identification and translation document, not a substitute license.
+Testing & documents|11|What identification categories are part of the Standard license's six-point verification?|At least one primary and one secondary document|Only six photocopies of the same ID|Only proof of insurance|Only a student report card|The six-point total must include the specified primary and secondary document categories.
+Vehicle control & safety|50|Why should you walk around the car before entering it?|To check for children, objects and hazards hidden from the driver's seat|To warm the tires|To reset the engine|To avoid adjusting mirrors|The areas near a vehicle can hide children or obstacles once you are seated.
+Vehicle control & safety|56|During reversing, turning the steering wheel right makes the rear of the car go where?|To the right|To the left|Straight regardless of steering|Upward|The rear follows the steering direction; remember the front swings in the opposite direction during a reverse turn.
+Vehicle control & safety|57|When using a backup camera, what remains necessary?|Direct checks and the normal safe-reversing principles|Looking only at the screen|Reversing at road speed|Ignoring the sides of the car|The manual permits cameras but says reversing principles still apply first.
+Vehicle control & safety|56|Under normal conditions, how far should a vehicle horn be audible?|At least 200 feet|At least 10 feet|At least 25 feet|At least one mile|The horn is a warning device and should be audible for at least 200 feet.
+</script>
+<script>
+'use strict';
+const MANUAL_URL = location.protocol === 'file:' ? 'drivermanual.pdf' : 'https://www.nj.gov/mvc/pdf/license/drivermanual.pdf';
+document.querySelectorAll('[data-manual]').forEach(link => { link.href = MANUAL_URL; });
+const BANK = document.getElementById('question-data').textContent.trim().split('\n').map((line, index) => {
+  const [topic, page, prompt, correct, b, c, d, explanation, sign] = line.split('|');
+  return { id: `q${String(index + 1).padStart(3, '0')}`, topic, page: Number(page), prompt, options: [correct, b, c, d], explanation, sign };
+});
+const shuffle = values => {
+  const result = [...values];
+  for (const index of result.keys()) {
+    const other = index + Math.floor(Math.random() * (result.length - index));
+    [result[index], result[other]] = [result[other], result[index]];
+  }
+  return result;
+};
+const state = { session: null, progress: { version: 1, records: {}, history: [] }, saving: true };
+window.NJPractice = state;
+Object.defineProperty(state, 'bank', { value: BANK });
+const $ = id => document.getElementById(id);
+const el = (tag, text, className) => {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+};
+const show = screen => {
+  ['home', 'quiz', 'results', 'library'].forEach(id => { $(id).hidden = id !== screen; });
+  if (screen === 'home') renderDashboard();
+};
+const sourceLink = q => {
+  const link = el('a', `Manual p. ${q.page - 2} (PDF p. ${q.page})`, 'source');
+  link.href = `${MANUAL_URL}#page=${q.page}`;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  return link;
+};
+const SIGNS = {
+  stop: ['Red octagonal sign marked STOP', '<polygon fill="#b82424" points="48,8 112,8 152,48 152,112 112,152 48,152 8,112 8,48"/><polygon fill="none" stroke="white" stroke-width="3" points="50,15 110,15 145,50 145,110 110,145 50,145 15,110 15,50"/><text x="80" y="94" font-size="37" fill="white">STOP</text>'],
+  yield: ['Downward-pointing red-bordered triangle marked YIELD', '<polygon fill="#bf2929" points="5,12 155,12 80,149"/><polygon fill="white" points="26,25 134,25 80,126"/><text x="80" y="65" font-size="24" fill="#a52020">YIELD</text>'],
+  'do-not-enter': ['Red circle with a white bar and DO NOT ENTER text', '<rect x="3" y="3" width="154" height="154" fill="white" stroke="#152630" stroke-width="3"/><circle cx="80" cy="80" r="69" fill="#b82424"/><path d="M22 68H138V93H22Z" fill="white"/><g fill="white" font-size="20"><text x="80" y="52">DO NOT</text><text x="80" y="123">ENTER</text></g>'],
+  'wrong-way': ['Red rectangular sign marked WRONG WAY', '<rect x="4" y="30" width="152" height="100" rx="5" fill="#b82424"/><rect x="10" y="36" width="140" height="88" rx="4" fill="none" stroke="white" stroke-width="2"/><g fill="white" font-size="27"><text x="80" y="74">WRONG</text><text x="80" y="108">WAY</text></g>'],
+  warning: ['Yellow diamond with black border', '<path d="M80 5L155 80 80 155 5 80Z" fill="#f4ce39" stroke="#182930" stroke-width="4"/>'],
+  'no-passing': ['Yellow pennant marked NO PASSING ZONE', '<path d="M5 15L155 80 5 145Z" fill="#f4ce39" stroke="#182930" stroke-width="4"/><g font-size="15"><text x="48" y="67">NO</text><text x="59" y="87">PASSING</text><text x="47" y="107">ZONE</text></g>'],
+  school: ['Yellow five-sided school-sign shape', '<path d="M80 5L149 58V149H11V58Z" fill="#e8dc45" stroke="#182930" stroke-width="4"/>'],
+  railroad: ['Yellow circular sign with an X and two R letters', '<circle cx="80" cy="80" r="73" fill="#f4ce39" stroke="#182930" stroke-width="4"/><path d="M35 35L125 125M125 35L35 125" stroke="#182930" stroke-width="9"/><text x="30" y="90" font-size="27">R</text><text x="130" y="90" font-size="27">R</text>'],
+  crossbuck: ['White X-shaped sign marked RAILROAD CROSSING', '<g transform="rotate(35 80 80)"><rect x="2" y="68" width="156" height="24" fill="white" stroke="#182930" stroke-width="2"/><text x="80" y="85" font-size="15">RAILROAD</text></g><g transform="rotate(-35 80 80)"><rect x="2" y="68" width="156" height="24" fill="white" stroke="#182930" stroke-width="2"/><text x="80" y="85" font-size="15">CROSSING</text></g>'],
+  'road-work': ['Orange diamond marked ROAD WORK AHEAD', '<path d="M80 5L155 80 80 155 5 80Z" fill="#f5a036" stroke="#182930" stroke-width="4"/><g font-size="19"><text x="80" y="63">ROAD</text><text x="80" y="86">WORK</text><text x="80" y="109">AHEAD</text></g>'],
+  hospital: ['Blue square with a white H', '<rect x="10" y="10" width="140" height="140" rx="7" fill="#17599b"/><text x="80" y="119" font-size="106" fill="white">H</text>'],
+  recreation: ['Brown rectangular guide sign marked PARK', '<rect x="5" y="35" width="150" height="90" rx="5" fill="#744b33"/><rect x="10" y="40" width="140" height="80" rx="3" fill="none" stroke="white" stroke-width="2"/><text x="80" y="91" fill="white" font-size="35">PARK</text>'],
+  guide: ['Green rectangular direction sign marked EXIT with an arrow', '<rect x="5" y="35" width="150" height="90" rx="5" fill="#17603e"/><text x="60" y="90" fill="white" font-size="29">EXIT</text><path d="M102 80H138M123 65L138 80 123 95" fill="none" stroke="white" stroke-width="6"/>'],
+  'speed-limit': ['White rectangular sign marked SPEED LIMIT 50', '<rect x="24" y="5" width="112" height="150" rx="7" fill="white" stroke="#182930" stroke-width="4"/><text x="80" y="36" font-size="21">SPEED</text><text x="80" y="62" font-size="21">LIMIT</text><text x="80" y="131" font-size="62">50</text>'],
+  'no-u-turn': ['U-turn arrow crossed by a red prohibition circle and slash', '<rect x="5" y="5" width="150" height="150" rx="5" fill="white" stroke="#182930" stroke-width="3"/><path d="M108 122V65C108 28 52 28 52 65V111M34 91L52 112 70 91" fill="none" stroke="#182930" stroke-width="10"/><circle cx="80" cy="80" r="63" stroke="#c22828" stroke-width="10" fill="none"/><path d="M35 35L125 125" stroke="#c22828" stroke-width="10"/>'],
+  'no-right-turn': ['Right-turn arrow crossed by a red prohibition circle and slash', '<rect x="5" y="5" width="150" height="150" rx="5" fill="white" stroke="#182930" stroke-width="3"/><path d="M54 125V80Q54 57 80 57H118M98 37L120 57 98 77" fill="none" stroke="#182930" stroke-width="10"/><circle cx="80" cy="80" r="63" stroke="#c22828" stroke-width="10" fill="none"/><path d="M35 35L125 125" stroke="#c22828" stroke-width="10"/>'],
+  'one-way': ['Black and white ONE WAY arrow pointing right', '<rect x="4" y="45" width="152" height="70" fill="white" stroke="#182930" stroke-width="3"/><path d="M10 55H114V48L151 80 114 112V105H10Z" fill="#182930"/><text x="74" y="88" fill="white" font-size="22">ONE WAY</text>'],
+  'no-parking': ['Letter P crossed by a red prohibition circle and slash', '<rect x="5" y="5" width="150" height="150" rx="5" fill="white" stroke="#182930" stroke-width="3"/><text x="80" y="121" font-size="112">P</text><circle cx="80" cy="80" r="63" stroke="#c22828" stroke-width="10" fill="none"/><path d="M35 35L125 125" stroke="#c22828" stroke-width="10"/>']
+};
+const signImage = q => {
+  const box = el('div');
+  if (!q.sign) return box;
+  const [label, drawing] = SIGNS[q.sign];
+  // SVG markup comes only from the fixed, local illustration table.
+  box.innerHTML = `<svg class="sign" viewBox="0 0 160 160" role="img" xmlns="http://www.w3.org/2000/svg"><g font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" fill="#182930">${drawing}</g></svg>`;
+  box.firstChild.setAttribute('aria-label', label);
+  return box;
+};
+const TOPICS = [...new Set(BANK.map(q => q.topic))];
+const STORAGE_KEY = 'nj-road-ready-v1';
+const questionById = new Map(BANK.map(q => [q.id, q]));
+const notice = message => {
+  $('notice').textContent = message;
+  $('notice').hidden = false;
+};
+const plainObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+const natural = value => Number.isSafeInteger(value) && value >= 0;
+const modes = ['exam', 'study', 'missed'];
+const loadProgress = () => {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw === null) return;
+    const saved = JSON.parse(raw);
+    if (!plainObject(saved) || saved.version !== 1 || !plainObject(saved.records) || !Array.isArray(saved.history)) throw new Error('Unsupported progress format');
+    if (!Object.entries(saved.records).every(([id, record]) => questionById.has(id) && plainObject(record) &&
+      natural(record.attempts) && record.attempts > 0 && natural(record.correct) && record.correct <= record.attempts &&
+      typeof record.lastCorrect === 'boolean')) throw new Error('Invalid answer history');
+    if (saved.history.length > 20 || !saved.history.every(item => plainObject(item) && natural(item.correct) &&
+      natural(item.total) && item.total > 0 && item.total <= BANK.length && item.correct <= item.total &&
+      modes.includes(item.mode) && typeof item.at === 'string' && Number.isFinite(Date.parse(item.at)))) throw new Error('Invalid session history');
+    if (saved.active !== null) {
+      const active = saved.active;
+      if (!plainObject(active) || !modes.includes(active.mode) || !Array.isArray(active.questions) ||
+        active.questions.length === 0 || active.questions.length > BANK.length ||
+        (active.mode === 'exam' && active.questions.length !== 50) ||
+        !natural(active.index) || active.index >= active.questions.length || !plainObject(active.answers)) throw new Error('Invalid saved session');
+      const ids = new Set();
+      for (const item of active.questions) {
+        if (!plainObject(item) || !questionById.has(item.id) || ids.has(item.id) || !Array.isArray(item.choices) ||
+          item.choices.length !== 4 || new Set(item.choices).size !== 4 ||
+          !item.choices.every(choice => questionById.get(item.id).options.includes(choice))) throw new Error('Invalid saved question');
+        ids.add(item.id);
+      }
+      if (!Object.entries(active.answers).every(([id, answer]) => ids.has(id) && questionById.get(id).options.includes(answer))) throw new Error('Invalid saved answer');
+      state.session = {
+        mode: active.mode,
+        questions: active.questions.map(item => ({ ...questionById.get(item.id), choices: item.choices })),
+        answers: active.answers,
+        index: active.index
+      };
+    }
+    state.progress = { version: 1, records: saved.records, history: saved.history };
+  } catch (error) {
+    state.saving = false;
+    notice(`Saved progress could not be loaded (${error.message}). You can practice without saving. Existing data will not be overwritten; use Reset saved progress to start fresh.`);
+  }
+};
+const saveProgress = () => {
+  if (!state.saving) return;
+  const session = state.session;
+  const active = session && !session.finished ? {
+    mode: session.mode, questions: session.questions.map(q => ({ id: q.id, choices: q.choices })),
+    answers: session.answers, index: session.index
+  } : null;
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...state.progress, active }));
+  } catch (error) {
+    state.saving = false;
+    notice(`Progress could not be saved (${error.message}). Practice still works, but new progress and this session may be lost when you close or reload the page.`);
+  }
+};
+const recordAnswer = (q, answer) => {
+  const old = state.progress.records[q.id] || { attempts: 0, correct: 0 };
+  const correct = answer === q.options[0];
+  state.progress.records[q.id] = { attempts: old.attempts + 1, correct: old.correct + Number(correct), lastCorrect: correct };
+};
+const missedQuestions = () => BANK.filter(q => state.progress.records[q.id]?.lastCorrect === false);
+const confirmAction = (title, message, label, action) => {
+  $('confirm-title').textContent = title;
+  $('confirm-message').textContent = message;
+  $('confirm-ok').textContent = label;
+  $('confirm-cancel').textContent = 'Cancel';
+  $('confirm-ok').onclick = () => { $('confirm-dialog').close(); action(); };
+  $('confirm-cancel').onclick = () => $('confirm-dialog').close();
+  $('confirm-dialog').showModal();
+  $('confirm-cancel').focus();
+};
+const examQuestions = () => {
+  const groups = shuffle(TOPICS).map(topic => shuffle(BANK.filter(q => q.topic === topic)));
+  const rounds = Array.from({ length: Math.max(...groups.map(group => group.length)) }, (_, index) => index);
+  return shuffle(rounds.flatMap(index => groups.flatMap(group => group[index] ? [group[index]] : [])).slice(0, 50));
+};
+const start = (mode = 'exam', topic = 'all', count = 10) => {
+  const begin = () => {
+    const pool = mode === 'missed' ? missedQuestions() : topic === 'all' ? BANK : BANK.filter(q => q.topic === topic);
+    if (pool.length === 0) {
+      notice('No questions match this session. Choose another topic or answer some questions before reviewing missed ones.');
+      return;
+    }
+    const selected = mode === 'exam' ? examQuestions() : shuffle(pool).slice(0, count === 'all' ? pool.length : Number(count));
+    state.session = { mode, questions: selected.map(q => ({ ...q, choices: shuffle(q.options) })), answers: {}, index: 0 };
+    saveProgress();
+    show('quiz');
+    renderQuestion();
+    $('question').focus();
+  };
+  if (state.session && !state.session.finished) {
+    confirmAction('Replace unfinished session?', 'The current session will be replaced. Study answers already recorded remain in your progress; an unfinished exam is not scored.', 'Start new session', begin);
+  } else begin();
+};
+const renderQuestion = () => {
+  const session = state.session;
+  const q = session.questions[session.index];
+  $('counter').textContent = `Question ${session.index + 1} of ${session.questions.length}`;
+  $('quiz-mode').textContent = session.mode === 'exam' ? 'Mock exam' : session.mode === 'missed' ? 'Missed-question review' : 'Study mode';
+  $('quiz-status').textContent = `${Object.keys(session.answers).length} answered`;
+  $('question-topic').textContent = q.topic;
+  $('question').textContent = q.prompt;
+  $('sign').replaceChildren(signImage(q));
+  $('feedback').hidden = true;
+  const answered = Object.hasOwn(session.answers, q.id);
+  $('answers').replaceChildren(...q.choices.map((choice, index) => {
+    const button = el('button', undefined, 'answer');
+    button.append(el('span', String.fromCharCode(65 + index), 'letter'), el('span', choice));
+    button.setAttribute('aria-pressed', String(session.answers[q.id] === choice));
+    if (session.mode !== 'exam' && answered) {
+      button.disabled = true;
+      button.classList.toggle('correct', choice === q.options[0]);
+      button.classList.toggle('incorrect', choice === session.answers[q.id] && choice !== q.options[0]);
+    }
+    button.onclick = () => {
+      if (session.mode !== 'exam' && Object.hasOwn(session.answers, q.id)) return;
+      session.answers[q.id] = choice;
+      if (session.mode !== 'exam') recordAnswer(q, choice);
+      saveProgress();
+      renderQuestion();
+      if (session.mode !== 'exam') $('next').disabled ? $('finish').focus() : $('next').focus();
+      else $('answers').children[index].focus();
+    };
+    return button;
+  }));
+  if (session.mode !== 'exam' && answered) {
+    const correct = session.answers[q.id] === q.options[0];
+    $('feedback').classList.toggle('wrong', !correct);
+    $('feedback').replaceChildren(el('strong', correct ? 'Correct.' : 'Not quite.'),
+      el('p', `Correct answer: ${q.options[0]}`), el('p', q.explanation), sourceLink(q));
+    $('feedback').hidden = false;
+  }
+  $('previous').disabled = session.index === 0;
+  $('next').disabled = session.index === session.questions.length - 1;
+  $('progress-fill').style.width = `${Object.keys(session.answers).length / session.questions.length * 100}%`;
+  document.querySelector('.progress').setAttribute('aria-valuenow', Object.keys(session.answers).length);
+  document.querySelector('.progress').setAttribute('aria-valuemax', session.questions.length);
+  $('question-map').replaceChildren(...session.questions.map((question, index) => {
+    const button = el('button', String(index + 1), Object.hasOwn(session.answers, question.id) ? 'answered' : '');
+    button.setAttribute('aria-label', `Question ${index + 1}${Object.hasOwn(session.answers, question.id) ? ', answered' : ', unanswered'}`);
+    button.setAttribute('aria-current', String(index === session.index));
+    button.onclick = () => { session.index = index; saveProgress(); renderQuestion(); $('question').focus(); };
+    return button;
+  }));
+};
+const finish = () => {
+  const session = state.session;
+  if (session.finished) return;
+  const correct = session.questions.filter(q => session.answers[q.id] === q.options[0]).length;
+  session.questions.forEach(q => {
+    if (session.mode === 'exam' || !Object.hasOwn(session.answers, q.id)) recordAnswer(q, session.answers[q.id]);
+  });
+  session.finished = true;
+  state.progress.history = [{ mode: session.mode, correct, total: session.questions.length, at: new Date().toISOString() }, ...state.progress.history].slice(0, 20);
+  saveProgress();
+  const title = el('h1', session.mode !== 'exam' ? 'Study session complete' : correct >= 40 ? 'Practice exam passed' : 'Keep practicing');
+  title.id = 'result-title';
+  title.tabIndex = -1;
+  const score = el('div', `${correct} / ${session.questions.length}`, 'score');
+  score.id = 'result-score';
+  const panel = el('div', undefined, 'panel');
+  panel.append(el('p', 'Your results', 'eyebrow'), title, score,
+    el('p', `${Math.round(correct / session.questions.length * 100)}% correct. A full mock exam needs 40 of 50 to pass.`, 'muted'));
+  const home = el('button', 'Return to dashboard', 'primary');
+  home.onclick = () => show('home');
+  panel.append(home);
+  const heading = el('h2', 'Review every answer');
+  heading.className = 'section-heading';
+  const review = el('div', undefined, 'panel');
+  review.append(...session.questions.map((q, index) => {
+    const item = el('article', undefined, 'review-item');
+    const answer = session.answers[q.id];
+    const isCorrect = answer === q.options[0];
+    item.append(el('span', `${q.topic} / ${isCorrect ? 'Correct' : answer === undefined ? 'Unanswered' : 'Missed'}`, isCorrect ? 'good' : 'bad'), signImage(q),
+      el('h3', `${index + 1}. ${q.prompt}`),
+      el('p', `Your answer: ${answer ?? 'Not answered'}`),
+      el('p', `Correct answer: ${q.options[0]}`, 'good'),
+      el('p', q.explanation), sourceLink(q));
+    return item;
+  }));
+  $('results').replaceChildren(panel, heading, review);
+  show('results');
+  title.focus();
+};
+const renderDashboard = () => {
+  const records = Object.values(state.progress.records);
+  const attempts = records.reduce((sum, record) => sum + record.attempts, 0);
+  const correct = records.reduce((sum, record) => sum + record.correct, 0);
+  $('stats').replaceChildren(...[
+    [BANK.length, 'Original questions'],
+    [`${records.length} / ${BANK.length}`, 'Questions practiced'],
+    [attempts ? `${Math.round(correct / attempts * 100)}%` : '--', 'Practice accuracy'],
+    [records.filter(record => record.lastCorrect).length, 'Correct last time']
+  ].map(([value, label]) => {
+    const item = el('div');
+    item.append(el('strong', String(value)), el('small', label));
+    return item;
+  }));
+  const missed = missedQuestions().length;
+  $('review-missed').textContent = `Review missed (${missed})`;
+  $('review-missed').disabled = missed === 0;
+  $('resume').hidden = !state.session || state.session.finished;
+  $('topics').replaceChildren(el('h2', 'Take it one topic at a time', 'section-heading'),
+    el('p', 'Bars show how much of each topic you have practiced, not a guarantee of mastery. Skipped questions count as missed when you finish.', 'muted'));
+  const grid = el('div', undefined, 'grid');
+  grid.append(...TOPICS.map(topic => {
+    const questions = BANK.filter(q => q.topic === topic);
+    const seen = questions.filter(q => state.progress.records[q.id]).length;
+    const button = el('button', undefined, 'topic-card');
+    button.append(el('strong', topic), el('small', `${seen} / ${questions.length} practiced / Practice ${Math.min(10, questions.length)} questions`));
+    const track = el('span', undefined, 'topic-track');
+    const fill = el('i');
+    fill.style.width = `${seen / questions.length * 100}%`;
+    track.append(fill);
+    button.append(track);
+    button.onclick = () => start('study', topic, 10);
+    return button;
+  }));
+  $('topics').append(grid);
+  $('history').replaceChildren();
+  if (state.progress.history.length) {
+    $('history').append(el('h2', 'Recent sessions', 'section-heading'));
+    const list = el('div', undefined, 'panel');
+    state.progress.history.forEach(item => {
+      const label = item.mode === 'exam' ? 'Mock exam' : item.mode === 'missed' ? 'Missed review' : 'Study';
+      list.append(el('p', `${new Date(item.at).toLocaleString()} / ${label} / ${item.correct} of ${item.total} (${Math.round(item.correct / item.total * 100)}%)`));
+    });
+    $('history').append(list);
+  }
+};
+const renderLibrary = () => {
+  const term = $('search').value.trim().toLocaleLowerCase();
+  const topic = $('library-topic').value;
+  const questions = BANK.filter(q => (topic === 'all' || q.topic === topic) &&
+    [q.prompt, q.explanation, q.topic, ...q.options].join(' ').toLocaleLowerCase().includes(term));
+  $('library-count').textContent = questions.length ? `${questions.length} of ${BANK.length} questions` : 'No matching questions. Try a different search or topic.';
+  $('library-list').replaceChildren(...questions.map(q => {
+    const item = el('article', undefined, 'library-question');
+    const options = el('ul');
+    options.append(...shuffle(q.options).map(option => el('li', option)));
+    const answer = el('details');
+    answer.append(el('summary', 'Show answer & explanation'), el('p', `Correct answer: ${q.options[0]}`, 'good'),
+      el('p', q.explanation), sourceLink(q));
+    item.append(el('span', `${q.id.toUpperCase()} / ${q.topic}`, 'eyebrow'), signImage(q), el('h3', q.prompt), options, answer);
+    return item;
+  }));
+};
+$('browse').onclick = () => { show('library'); renderLibrary(); $('library-title').focus(); };
+$('library-home').onclick = () => show('home');
+$('search').oninput = renderLibrary;
+$('library-topic').onchange = renderLibrary;
+$('start-exam').onclick = () => start();
+$('start-study').onclick = () => start('study', $('topic-select').value, $('count-select').value);
+$('review-missed').onclick = () => start('missed', 'all', 'all');
+$('resume').onclick = () => { show('quiz'); renderQuestion(); $('question').focus(); };
+$('finish').onclick = () => {
+  const remaining = state.session.questions.length - Object.keys(state.session.answers).length;
+  if (remaining) confirmAction('Finish with unanswered questions?', `${remaining} unanswered question${remaining === 1 ? '' : 's'} will count as incorrect and be added to missed-question review.`, 'Finish and score', finish);
+  else finish();
+};
+$('previous').onclick = () => { state.session.index--; saveProgress(); renderQuestion(); $('question').focus(); };
+$('next').onclick = () => { state.session.index++; saveProgress(); renderQuestion(); $('question').focus(); };
+$('home-button').onclick = () => show('home');
+$('reset-progress').onclick = () => confirmAction('Reset all saved progress?', 'This permanently clears your local answer history, recent scores and unfinished session for this app. The question bank is not changed.', 'Reset progress', () => {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (error) {
+    notice(`Progress could not be reset (${error.message}). Browser storage is not accessible; no progress has been cleared.`);
+    return;
+  }
+  state.progress = { version: 1, records: {}, history: [] };
+  state.session = null;
+  state.saving = true;
+  $('notice').hidden = true;
+  saveProgress();
+  show('home');
+});
+['topic-select', 'library-topic'].forEach(id => {
+  $(id).append(...TOPICS.map(topic => {
+    const option = el('option', topic);
+    option.value = topic;
+    return option;
+  }));
+});
+loadProgress();
+renderDashboard();
+</script>
+</body>
+</html>

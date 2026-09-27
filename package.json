@@ -1,0 +1,10 @@
+{
+  "name": "nj-knowledge-practice",
+  "private": true,
+  "scripts": {
+    "test": "playwright test practice.test.js --workers=1 --reporter=line"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0"
+  }
+}
